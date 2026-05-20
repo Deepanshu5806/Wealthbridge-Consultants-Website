@@ -1,0 +1,11 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "wealthbridge",
+      "runtimeExecutable": "python",
+      "runtimeArgs": ["-m", "http.server", "8080", "--directory", "C:\\Users\\Deepanshu Jain\\Downloads\\wealthbridge-website"],
+      "port": 8080
+    }
+  ]
+}

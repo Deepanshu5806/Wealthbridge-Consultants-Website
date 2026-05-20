@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unlisted Shares — WealthBridge</title>
+    <!-- Using system Calibri font -->
+    <link rel="icon" type="image/png" href="images/Image 11.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page-loader"><div class="loader-spinner"></div></div>
+
+    <!-- Stock Ticker -->
+    <div class="ticker-ribbon">
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+                "symbols": [
+                    {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
+                    {"proName": "FOREXCOM:NSXUSD", "title": "US 100"},
+                    {"proName": "FX_IDC:EURUSD", "title": "EUR to USD"},
+                    {"description": "BTC/USD", "proName": "BITSTAMP:BTCUSD"},
+                    {"description": "ETH/USD", "proName": "BITSTAMP:ETHUSD"},
+                    {"description": "Apple", "proName": "NASDAQ:AAPL"},
+                    {"description": "Tesla", "proName": "NASDAQ:TSLA"},
+                    {"description": "Microsoft", "proName": "NASDAQ:MSFT"},
+                    {"description": "Amazon", "proName": "NASDAQ:AMZN"},
+                    {"description": "Google", "proName": "NASDAQ:GOOGL"},
+                    {"description": "NVIDIA", "proName": "NASDAQ:NVDA"},
+                    {"description": "Meta", "proName": "NASDAQ:META"}
+                ],
+                "showSymbolLogo": true,
+                "isTransparent": true,
+                "displayMode": "adaptive",
+                "colorTheme": "dark",
+                "locale": "en"
+            }
+            </script>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/Image 11.png" alt="WealthBridge" class="nav-logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="unlisted.html" class="active">Unlisted Shares</a>
+                <a href="golden-visas.html">Golden Visas</a>
+                <a href="global-markets.html">Global Markets</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="#" class="nav-cta">Login</a>
+            </div>
+            <div class="mobile-toggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="particles"></div>
+        <h1>Unlisted <span class="highlight">Shares</span></h1>
+        <p>Invest in India's most promising pre-IPO and unlisted companies</p>
+    </section>
+
+    <!-- Intro Section -->
+    <section>
+        <div class="container">
+            <div class="markets-grid">
+                <div class="reveal">
+                    <div class="section-label" style="justify-content:flex-start;">Pre-IPO Opportunities</div>
+                    <h2 class="section-title" style="text-align:left;">Access <span class="highlight">High-Growth</span> Companies Before They List</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem; line-height: 1.8;">
+                        Unlisted shares offer a unique opportunity to invest in companies before they go public. From established financial institutions to high-growth startups, our curated selection provides early access to India's most promising businesses.
+                    </p>
+                    <ul class="markets-list">
+                        <li>Carefully vetted and researched unlisted opportunities</li>
+                        <li>Transparent pricing with complete fundamental analysis</li>
+                        <li>Expert guidance on entry and exit strategies</li>
+                        <li>Regular updates on company performance and IPO timelines</li>
+                        <li>Dedicated support for documentation and transfer process</li>
+                    </ul>
+                </div>
+                <div class="reveal reveal-delay-2" style="display:flex;flex-direction:column;gap:20px;">
+                    <div class="safety-card" style="text-align:left;padding:24px;">
+                        <h3 style="margin-bottom:8px;"><i class="fas fa-chart-line" style="color:var(--accent);margin-right:8px;"></i> Why Unlisted Shares?</h3>
+                        <p>Early investors in companies like HDFC AMC, SBI Cards, and IRCTC saw massive returns when these companies eventually listed on the stock exchange.</p>
+                    </div>
+                    <div class="safety-card" style="text-align:left;padding:24px;">
+                        <h3 style="margin-bottom:8px;"><i class="fas fa-shield-alt" style="color:var(--accent);margin-right:8px;"></i> Our Due Diligence</h3>
+                        <p>Every unlisted share on our platform goes through rigorous financial analysis, management assessment, and growth potential evaluation.</p>
+                    </div>
+                    <div class="safety-card" style="text-align:left;padding:24px;">
+                        <h3 style="margin-bottom:8px;"><i class="fas fa-file-contract" style="color:var(--accent);margin-right:8px;"></i> Seamless Process</h3>
+                        <p>Complete end-to-end support from share selection to transfer. All transactions are done via proper NSDL/CDSL transfer.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Unlisted Shares Grid -->
+    <section class="unlisted-section">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Featured Shares</div>
+                <h2 class="section-title">Popular <span class="highlight">Unlisted Stocks</span></h2>
+                <p class="section-subtitle">Click on any share to view detailed fundamentals and key metrics.</p>
+            </div>
+            <div class="unlisted-grid">
+                <!-- NSE -->
+                <div class="unlisted-card reveal" onclick="openShareModal('nse')">
+                    <div class="unlisted-card-header">
+                        <div class="unlisted-logo" style="background:#1a56db;">NSE</div>
+                        <div>
+                            <h3>National Stock Exchange</h3>
+                            <div class="sector">Financial Infrastructure</div>
+                        </div>
+                    </div>
+                    <div class="unlisted-metrics">
+                        <div class="metric">
+                            <div class="metric-label">Price</div>
+                            <div class="metric-value green">~₹2,025</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">P/E Ratio</div>
+                            <div class="metric-value">~208.1x</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Market Cap</div>
+                            <div class="metric-value navy">~₹5.01L Cr</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">EPS</div>
+                            <div class="metric-value">~₹9.74</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SBI AMC -->
+                <div class="unlisted-card reveal reveal-delay-1" onclick="openShareModal('sbiamc')">
+                    <div class="unlisted-card-header">
+                        <div class="unlisted-logo" style="background:#2563eb;">SBI<br>AMC</div>
+                        <div>
+                            <h3>SBI AMC (Mutual Fund)</h3>
+                            <div class="sector">Asset Management</div>
+                        </div>
+                    </div>
+                    <div class="unlisted-metrics">
+                        <div class="metric">
+                            <div class="metric-label">Price</div>
+                            <div class="metric-value green">~₹775</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">P/E Ratio</div>
+                            <div class="metric-value">~62x</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Market Cap</div>
+                            <div class="metric-value navy">~₹1.57L Cr</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">AUM</div>
+                            <div class="metric-value">~₹10.5L Cr</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Zepto -->
+                <div class="unlisted-card reveal reveal-delay-2" onclick="openShareModal('zepto')">
+                    <div class="unlisted-card-header">
+                        <div class="unlisted-logo" style="background:#7c3aed;">Z</div>
+                        <div>
+                            <h3>Zepto</h3>
+                            <div class="sector">Quick Commerce / Technology</div>
+                        </div>
+                    </div>
+                    <div class="unlisted-metrics">
+                        <div class="metric">
+                            <div class="metric-label">Price</div>
+                            <div class="metric-value green">~₹42</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">P/E Ratio</div>
+                            <div class="metric-value">-59.4x</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Market Cap</div>
+                            <div class="metric-value navy">~₹74,194 Cr</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Book Value</div>
+                            <div class="metric-value">~₹0.4</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- MSEI -->
+                <div class="unlisted-card reveal reveal-delay-3" onclick="openShareModal('msei')">
+                    <div class="unlisted-card-header">
+                        <div class="unlisted-logo" style="background:#0891b2;">MSEI</div>
+                        <div>
+                            <h3>Metropolitan Stock Exchange</h3>
+                            <div class="sector">Financial Infrastructure</div>
+                        </div>
+                    </div>
+                    <div class="unlisted-metrics">
+                        <div class="metric">
+                            <div class="metric-label">Price</div>
+                            <div class="metric-value green">~₹6.25</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">P/E Ratio</div>
+                            <div class="metric-value">-200.9x</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Market Cap</div>
+                            <div class="metric-value navy">~₹6,875 Cr</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Book Value</div>
+                            <div class="metric-value">~₹0.4</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chennai Super Kings -->
+                <div class="unlisted-card reveal reveal-delay-4" onclick="openShareModal('csk')">
+                    <div class="unlisted-card-header">
+                        <div class="unlisted-logo" style="background:#eab308; color:#1a1a2e;">CSK</div>
+                        <div>
+                            <h3>Chennai Super Kings</h3>
+                            <div class="sector">Sports & Entertainment</div>
+                        </div>
+                    </div>
+                    <div class="unlisted-metrics">
+                        <div class="metric">
+                            <div class="metric-label">Price</div>
+                            <div class="metric-value green">~₹268</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">P/E Ratio</div>
+                            <div class="metric-value">~68.6x</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Market Cap</div>
+                            <div class="metric-value navy">~₹10,169 Cr</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">EPS</div>
+                            <div class="metric-value">~₹3.91</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- InCred -->
+                <div class="unlisted-card reveal reveal-delay-5" onclick="openShareModal('incred')">
+                    <div class="unlisted-card-header">
+                        <div class="unlisted-logo" style="background:#dc2626;">InCred</div>
+                        <div>
+                            <h3>InCred Financial Services</h3>
+                            <div class="sector">NBFC / Fintech</div>
+                        </div>
+                    </div>
+                    <div class="unlisted-metrics">
+                        <div class="metric">
+                            <div class="metric-label">Price</div>
+                            <div class="metric-value green">~₹680</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">P/E Ratio</div>
+                            <div class="metric-value">~22x</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">Valuation</div>
+                            <div class="metric-value navy">~₹7,500 Cr</div>
+                        </div>
+                        <div class="metric">
+                            <div class="metric-label">ROE</div>
+                            <div class="metric-value green">~18%</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Disclaimer -->
+            <div class="disclaimer reveal">
+                <strong>Disclaimer:</strong> All share prices, valuations, and fundamental data presented herein are indicative and compiled from multiple publicly available market sources. Prices are subject to change based on prevailing market conditions, demand-supply dynamics, and transaction size. Past performance is not indicative of future results. Investments in unlisted securities are subject to market risk and carry higher risk and lower liquidity compared to listed instruments. Investors are advised to read all investment-related documents carefully, conduct their own due diligence, and consult a SEBI-registered financial advisor before making any investment decision. WealthBridge acts solely as a facilitator and does not provide any assurance on returns or guarantee the accuracy of the data presented.
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section>
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Process</div>
+                <h2 class="section-title">How It <span class="highlight">Works</span></h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card reveal">
+                    <div class="why-icon" style="background: rgba(59,130,246,0.12); width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin: 0 auto 16px; font-size:1.3rem; color:#3b82f6; font-weight:700;">1</div>
+                    <h4>Choose a Share</h4>
+                    <p>Browse our curated list of unlisted shares with detailed fundamentals and research.</p>
+                </div>
+                <div class="why-card reveal reveal-delay-1">
+                    <div class="why-icon" style="background: rgba(139,92,246,0.12); width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin: 0 auto 16px; font-size:1.3rem; color:#8b5cf6; font-weight:700;">2</div>
+                    <h4>Confirm Order</h4>
+                    <p>Discuss with our expert team, get the best price, and confirm your order with KYC.</p>
+                </div>
+                <div class="why-card reveal reveal-delay-2">
+                    <div class="why-icon" style="background: rgba(16,185,129,0.12); width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin: 0 auto 16px; font-size:1.3rem; color:#10b981; font-weight:700;">3</div>
+                    <h4>Transfer & Payment</h4>
+                    <p>Shares are transferred directly to your Demat account via NSDL/CDSL within 24-48 hours.</p>
+                </div>
+                <div class="why-card reveal reveal-delay-3">
+                    <div class="why-icon" style="background: rgba(249,115,22,0.12); width:56px; height:56px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin: 0 auto 16px; font-size:1.3rem; color:#f97316; font-weight:700;">4</div>
+                    <h4>Track & Grow</h4>
+                    <p>Get regular updates on company performance, valuations, and potential IPO timelines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container reveal">
+            <h2>Interested in <span class="highlight">Unlisted Shares?</span></h2>
+            <p>Speak with our experts to get the latest prices and availability for any unlisted stock.</p>
+            <div style="display:flex; gap:16px; justify-content:center;">
+                <a href="contact.html" class="btn btn-primary">Enquire Now <i class="fas fa-arrow-right"></i></a>
+                <a href="tel:+919311778137" class="btn btn-outline"><i class="fas fa-phone"></i> +91 9311778137</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Share Detail Modal -->
+    <div class="modal-overlay" id="shareModal" onclick="if(event.target===this)closeModal()">
+        <div class="modal-content">
+            <button class="modal-close" onclick="closeModal()">&times;</button>
+            <div class="modal-header">
+                <div class="modal-logo" id="modalLogo"></div>
+                <div>
+                    <h2 id="modalName"></h2>
+                    <div class="modal-sector" id="modalSector"></div>
+                </div>
+            </div>
+            <div class="modal-about">
+                <h4>About the Company</h4>
+                <p id="modalAbout"></p>
+            </div>
+            <div id="modalKeyMetrics" class="modal-metrics-grid"></div>
+            <div class="modal-fundamentals">
+                <h4>Key Fundamentals & Metrics</h4>
+                <div class="fundamentals-list" id="modalFundamentals"></div>
+            </div>
+            <div class="disclaimer" style="margin-top:20px; padding:14px 18px; font-size:0.75rem;">
+                <strong>Disclaimer:</strong> Prices and fundamental data are indicative, compiled from multiple publicly available market sources, and subject to change. Investments are subject to market risk. Please read all investment-related documents carefully before investing.
+            </div>
+            <div style="margin-top:20px; text-align:center;">
+                <a href="contact.html" class="btn btn-primary">Enquire About This Share <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/Image 11.png" alt="WealthBridge" style="height:46px; width:auto; margin-bottom:4px; filter: invert(1); mix-blend-mode: screen;">
+                    <p>A new age Wealth Manager creating a bridge between India and the rest of the world, making Indians true global citizens.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="global-markets.html">Global Markets</a></li>
+                        <li><a href="unlisted.html">Unlisted Shares</a></li>
+                        <li><a href="golden-visas.html">Golden Visas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" style="color:rgba(255,255,255,0.6);margin-right:8px;"></i> 97 Shanti Kunj, New Delhi 110070</li>
+                        <li><i class="fas fa-phone" style="color:rgba(255,255,255,0.6);margin-right:8px;"></i> +91 9311778137</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025 WealthBridge. All rights reserved.</span>
+                <span>SEBI Registered | AMFI Certified</span>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

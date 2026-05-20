@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us — WealthBridge</title>
+    <!-- Using system Calibri font -->
+    <link rel="icon" type="image/png" href="images/Image 11.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page-loader"><div class="loader-spinner"></div></div>
+
+    <!-- Stock Ticker -->
+    <div class="ticker-ribbon">
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+                "symbols": [
+                    {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
+                    {"proName": "FOREXCOM:NSXUSD", "title": "US 100"},
+                    {"proName": "FX_IDC:EURUSD", "title": "EUR to USD"},
+                    {"description": "BTC/USD", "proName": "BITSTAMP:BTCUSD"},
+                    {"description": "ETH/USD", "proName": "BITSTAMP:ETHUSD"},
+                    {"description": "Apple", "proName": "NASDAQ:AAPL"},
+                    {"description": "Tesla", "proName": "NASDAQ:TSLA"},
+                    {"description": "Microsoft", "proName": "NASDAQ:MSFT"},
+                    {"description": "Amazon", "proName": "NASDAQ:AMZN"},
+                    {"description": "Google", "proName": "NASDAQ:GOOGL"},
+                    {"description": "NVIDIA", "proName": "NASDAQ:NVDA"},
+                    {"description": "Meta", "proName": "NASDAQ:META"}
+                ],
+                "showSymbolLogo": true,
+                "isTransparent": true,
+                "displayMode": "adaptive",
+                "colorTheme": "dark",
+                "locale": "en"
+            }
+            </script>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/Image 11.png" alt="WealthBridge" class="nav-logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html" class="active">About Us</a>
+                <a href="unlisted.html">Unlisted Shares</a>
+                <a href="golden-visas.html">Golden Visas</a>
+                <a href="global-markets.html">Global Markets</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="#" class="nav-cta">Login</a>
+            </div>
+            <div class="mobile-toggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="particles"></div>
+        <h1>About <span class="highlight">WealthBridge</span></h1>
+        <p>Bridging India to the world's best investment opportunities</p>
+    </section>
+
+    <!-- About Content -->
+    <section>
+        <div class="container">
+            <div class="markets-grid">
+                <div class="reveal">
+                    <div class="section-label" style="justify-content:flex-start;">Our Story</div>
+                    <h2 class="section-title" style="text-align:left;">Pioneering <span class="highlight">Global Wealth</span> Management</h2>
+                    <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem; line-height: 1.8;">
+                        WealthBridge is helmed by a team of highly seasoned professionals with extensive international experience across Wealth Management and Digital Technology. We are committed to breaking all the barriers in connecting you with the best opportunities for growing your wealth across the world.
+                    </p>
+                    <p style="color: var(--text-muted); margin-bottom: 28px; font-size: 0.95rem; line-height: 1.8;">
+                        Through product innovation and technology, we are ushering in a new era in wealth management of a truly inter-connected world, which allows you to tap the best opportunities across different currencies, markets and assets.
+                    </p>
+                    <ul class="markets-list">
+                        <li>World's biggest markets — USA, China, Europe</li>
+                        <li>Trade Apple, Google, Nike, Nestle, Amazon & more</li>
+                        <li>Unique 2-in-1 Banking and Brokerage account</li>
+                        <li>Golden Visa advisory for UAE & USA</li>
+                    </ul>
+                </div>
+                <div class="reveal reveal-delay-2" style="display:flex;flex-direction:column;gap:24px;">
+                    <div class="safety-card" style="text-align:left;padding:28px;">
+                        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+                            <div class="safety-icon" style="margin:0;width:48px;height:48px;"><i class="fas fa-bullseye"></i></div>
+                            <h3 style="margin:0;">Our Mission</h3>
+                        </div>
+                        <p>To bring a human-centric approach to online wealth management, making investing and growing your wealth simple, safe, and seamless.</p>
+                    </div>
+                    <div class="safety-card" style="text-align:left;padding:28px;">
+                        <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px;">
+                            <div class="safety-icon" style="margin:0;width:48px;height:48px;"><i class="fas fa-eye"></i></div>
+                            <h3 style="margin:0;">Our Vision</h3>
+                        </div>
+                        <p>To be India's most trusted global wealth platform, empowering every Indian to invest across borders with confidence and transparency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Leadership</div>
+                <h2 class="section-title">Our <span class="highlight">Team</span></h2>
+                <p class="section-subtitle">Industry veterans with decades of experience in wealth management and technology.</p>
+            </div>
+            <div class="team-grid">
+                <div class="team-card reveal">
+                    <div class="team-photo">
+                        <img src="images/Image 9.png" alt="Shivam Sethi" loading="lazy">
+                    </div>
+                    <div class="team-info">
+                        <h3>Shivam Sethi</h3>
+                        <div class="role">Co-Founder & CEO</div>
+                        <p>Former Global Product Head of Digital Wealth Management with extensive experience in international markets and fintech innovation.</p>
+                    </div>
+                </div>
+                <div class="team-card reveal reveal-delay-1">
+                    <div class="team-photo">
+                        <img src="images/Image 8.png" alt="Gaurav Jain" loading="lazy">
+                    </div>
+                    <div class="team-info">
+                        <h3>Gaurav Jain</h3>
+                        <div class="role">Co-Founder & Additional Director</div>
+                        <p>Seasoned BFSI professional with an accomplished career across Life & Health Insurance, Mutual Funds, and Financial Advisory services.</p>
+                    </div>
+                </div>
+                <div class="team-card reveal reveal-delay-2">
+                    <div class="team-photo">
+                        <img src="images/Image 10.png" alt="Alok Chadda" loading="lazy">
+                    </div>
+                    <div class="team-info">
+                        <h3>Alok Chadda</h3>
+                        <div class="role">Director & CTO</div>
+                        <p>Over 25 years of extensive experience in Architectural Leadership, Analysis, Design & Development across global technology platforms.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Advisors -->
+            <div class="section-header reveal" style="margin-top: 80px;">
+                <div class="section-label">Advisors & Mentors</div>
+                <h2 class="section-title" style="font-size:2rem;">Our <span class="highlight">Advisory Board</span></h2>
+            </div>
+            <div class="team-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto;">
+                <div class="team-card reveal">
+                    <div class="team-photo">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="team-info">
+                        <h3>Deepak Gupta</h3>
+                        <div class="role">Advisor</div>
+                        <p>Senior financial industry veteran with deep expertise in capital markets, regulatory compliance, and institutional investing.</p>
+                    </div>
+                </div>
+                <div class="team-card reveal reveal-delay-1">
+                    <div class="team-photo">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <div class="team-info">
+                        <h3>Dr. Dinesh Kumar Goyal</h3>
+                        <div class="role">Mentor</div>
+                        <p>Indian Administrative Services officer (1981 batch), former Additional Chief Secretary, Government of Rajasthan. Alumnus of IIT Delhi, BITS Pilani, and the London School of Economics.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Distribution Partners -->
+    <section>
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Network</div>
+                <h2 class="section-title">Our Distribution <span class="highlight">Partners</span></h2>
+                <p class="section-subtitle">Strategic alliances with leading stock brokerages and financial advisors across India.</p>
+            </div>
+            <div class="services-grid" style="grid-template-columns: repeat(2, 1fr); max-width: 800px; margin: 0 auto;">
+                <div class="service-card reveal" style="text-align:center; display:flex; flex-direction:column; align-items:center; gap:16px;">
+                    <img src="images/Image 6.png" alt="Composite Securities Limited" style="height:100px; width:auto; object-fit:contain;">
+                    <h3>Composite Securities</h3>
+                    <p>Incorporated in 1995, providing stock broking services to individual investors and traders with a strong track record of excellence.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-1" style="text-align:center; display:flex; flex-direction:column; align-items:center; gap:16px;">
+                    <img src="images/Image 7.png" alt="GCJ Share Brokers" style="height:100px; width:auto; object-fit:contain;">
+                    <h3>GCJ Share Brokers</h3>
+                    <p>Leading financial advisors of Delhi NCR, providing high-quality financial advice and guidance to clients since 1997.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container reveal">
+            <h2>Partner with <span class="highlight">WealthBridge</span></h2>
+            <p>Join us in creating a new era of global wealth management for Indian investors.</p>
+            <a href="contact.html" class="btn btn-primary">Get in Touch <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/Image 11.png" alt="WealthBridge" style="height:46px; width:auto; margin-bottom:4px; filter: invert(1); mix-blend-mode: screen;">
+                    <p>A new age Wealth Manager creating a bridge between India and the rest of the world, making Indians true global citizens.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="global-markets.html">Global Markets</a></li>
+                        <li><a href="unlisted.html">Unlisted Shares</a></li>
+                        <li><a href="golden-visas.html">Golden Visas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" style="color:rgba(255,255,255,0.6);margin-right:8px;"></i> 97 Shanti Kunj, New Delhi 110070</li>
+                        <li><i class="fas fa-phone" style="color:rgba(255,255,255,0.6);margin-right:8px;"></i> +91 9311778137</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025 WealthBridge. All rights reserved.</span>
+                <span>SEBI Registered | AMFI Certified</span>
+            </div>
+        </div>
+    </footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

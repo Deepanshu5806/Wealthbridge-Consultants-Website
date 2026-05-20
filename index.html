@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WealthBridge — Global Wealth Management</title>
+    <!-- Using system Calibri font -->
+    <link rel="icon" type="image/png" href="images/Image 11.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <!-- Page Loader -->
+    <div class="page-loader">
+        <div class="loader-spinner"></div>
+    </div>
+
+    <!-- Stock Ticker Ribbon -->
+    <div class="ticker-ribbon">
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+                "symbols": [
+                    {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
+                    {"proName": "FOREXCOM:NSXUSD", "title": "US 100"},
+                    {"proName": "FX_IDC:EURUSD", "title": "EUR to USD"},
+                    {"description": "BTC/USD", "proName": "BITSTAMP:BTCUSD"},
+                    {"description": "ETH/USD", "proName": "BITSTAMP:ETHUSD"},
+                    {"description": "Apple", "proName": "NASDAQ:AAPL"},
+                    {"description": "Tesla", "proName": "NASDAQ:TSLA"},
+                    {"description": "Microsoft", "proName": "NASDAQ:MSFT"},
+                    {"description": "Amazon", "proName": "NASDAQ:AMZN"},
+                    {"description": "Google", "proName": "NASDAQ:GOOGL"},
+                    {"description": "NVIDIA", "proName": "NASDAQ:NVDA"},
+                    {"description": "Meta", "proName": "NASDAQ:META"}
+                ],
+                "showSymbolLogo": true,
+                "isTransparent": true,
+                "displayMode": "adaptive",
+                "colorTheme": "dark",
+                "locale": "en"
+            }
+            </script>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/Image 11.png" alt="WealthBridge" class="nav-logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="unlisted.html">Unlisted Shares</a>
+                <a href="golden-visas.html">Golden Visas</a>
+                <a href="global-markets.html">Global Markets</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="#" class="nav-cta">Login</a>
+            </div>
+            <div class="mobile-toggle">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="particles"></div>
+        <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span>Trusted by 5,000+ Investors</span>
+                </div>
+                <h1>Let the World Be Your <span class="highlight">Playing Field</span></h1>
+                <p>Access global markets, unlisted shares, and premium wealth management solutions — all from one platform. Simple, safe, and seamless investing.</p>
+                <div class="hero-btns">
+                    <a href="contact.html" class="btn btn-primary">
+                        Start Investing <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="about.html" class="btn btn-outline">
+                        <i class="fas fa-play-circle"></i> Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image">
+                    <img src="images/Image 1.png" alt="Bridging Global Ambitions to U.S. Opportunities — WealthBridge" style="width:100%; height:auto; border-radius: 16px; object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item reveal">
+                    <div class="stat-number"><span class="count-up" data-target="5000" data-suffix="+">0</span></div>
+                    <div class="stat-label">Active Investors</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-1">
+                    <div class="stat-number"><span class="count-up" data-target="50" data-suffix="+">0</span></div>
+                    <div class="stat-label">Global Markets</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-2">
+                    <div class="stat-number"><span class="count-up" data-target="2500" data-prefix="₹" data-suffix=" Cr+">0</span></div>
+                    <div class="stat-label">Assets Managed</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-3">
+                    <div class="stat-number"><span class="count-up" data-target="15" data-suffix=" yrs">0</span></div>
+                    <div class="stat-label">Of Experience</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section id="services">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">What We Offer</div>
+                <h2 class="section-title">Comprehensive <span class="highlight">Investment Solutions</span></h2>
+                <p class="section-subtitle">From global markets to unlisted equities, we provide end-to-end wealth management tailored to your goals.</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card reveal">
+                    <div class="service-icon"><i class="fas fa-globe"></i></div>
+                    <h3>Global Markets</h3>
+                    <p>Access the world's biggest markets — USA, China, Europe. Trade international stocks, ETFs, and mutual funds with ease.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-1">
+                    <div class="service-icon"><i class="fas fa-lock"></i></div>
+                    <h3>Unlisted Shares</h3>
+                    <p>Invest in pre-IPO and unlisted opportunities. Get access to high-growth companies before they hit public markets.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-2">
+                    <div class="service-icon"><i class="fas fa-passport"></i></div>
+                    <h3>Golden Visas</h3>
+                    <p>Secure global residency through investment. Expert guidance for UAE Golden Visa and USA EB-5 programs.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-3">
+                    <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+                    <h3>Mutual Funds & ETFs</h3>
+                    <p>Diversified investment products from the world's most trusted fund houses and asset management companies.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-4">
+                    <div class="service-icon"><i class="fas fa-university"></i></div>
+                    <h3>Private Banking</h3>
+                    <p>Unique 2-in-1 Banking and Brokerage account with international leaders for top-of-the-line services.</p>
+                </div>
+                <div class="service-card reveal reveal-delay-5">
+                    <div class="service-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h3>Insurance Solutions</h3>
+                    <p>Comprehensive life, general, and health insurance solutions from India's leading insurance providers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Global Markets -->
+    <section class="markets-section">
+        <div class="container">
+            <div class="markets-grid">
+                <div class="markets-content reveal">
+                    <div class="section-label" style="justify-content:flex-start;">Global Markets</div>
+                    <h2 class="section-title" style="text-align:left;">Invest in the World's <span class="highlight">Biggest Names</span></h2>
+                    <p style="color: var(--text-muted); margin-bottom: 28px; font-size: 0.95rem;">Best of international investments with access to a wide variety of markets and asset classes across different currencies and geographies.</p>
+                    <ul class="markets-list">
+                        <li>Trade Apple, Google, Amazon, Tesla, NVIDIA and 5000+ stocks</li>
+                        <li>Access US, European, Chinese, and Asian markets</li>
+                        <li>Unique 2-in-1 Banking & Brokerage account</li>
+                        <li>Real-time market data and research insights</li>
+                        <li>Dedicated relationship manager for your portfolio</li>
+                    </ul>
+                    <a href="global-markets.html" class="btn btn-primary" style="margin-top: 32px;">Explore Markets <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="markets-visual reveal reveal-delay-2">
+                    <!-- Live Stock Price List -->
+                    <div class="stock-list-container">
+                        <div class="stock-list-header">
+                            <span>Stock</span>
+                            <span>Price (USD)</span>
+                            <span style="display:flex;align-items:center;gap:6px;">1D Change <span id="live-dot" style="width:7px;height:7px;border-radius:50%;background:#22c55e;display:inline-block;animation:livePulse 1.5s ease-in-out infinite;"></span></span>
+                        </div>
+                        <div class="stock-list-item" data-symbol="AAPL">
+                            <span class="stock-name"><i class="fab fa-apple" style="margin-right:8px;"></i>Apple (AAPL)</span>
+                            <span class="stock-price" id="price-AAPL">$198.11</span>
+                            <span class="stock-change positive" id="change-AAPL">+1.24%</span>
+                        </div>
+                        <div class="stock-list-item" data-symbol="MSFT">
+                            <span class="stock-name"><i class="fab fa-microsoft" style="margin-right:8px;"></i>Microsoft (MSFT)</span>
+                            <span class="stock-price" id="price-MSFT">$454.27</span>
+                            <span class="stock-change positive" id="change-MSFT">+0.87%</span>
+                        </div>
+                        <div class="stock-list-item" data-symbol="GOOGL">
+                            <span class="stock-name"><i class="fab fa-google" style="margin-right:8px;"></i>Google (GOOGL)</span>
+                            <span class="stock-price" id="price-GOOGL">$175.98</span>
+                            <span class="stock-change negative" id="change-GOOGL">-0.32%</span>
+                        </div>
+                        <div class="stock-list-item" data-symbol="AMZN">
+                            <span class="stock-name"><i class="fab fa-amazon" style="margin-right:8px;"></i>Amazon (AMZN)</span>
+                            <span class="stock-price" id="price-AMZN">$203.65</span>
+                            <span class="stock-change positive" id="change-AMZN">+1.56%</span>
+                        </div>
+                        <div class="stock-list-item" data-symbol="TSLA">
+                            <span class="stock-name"><i class="fas fa-car" style="margin-right:8px;"></i>Tesla (TSLA)</span>
+                            <span class="stock-price" id="price-TSLA">$341.83</span>
+                            <span class="stock-change positive" id="change-TSLA">+2.34%</span>
+                        </div>
+                        <div class="stock-list-item" data-symbol="NVDA">
+                            <span class="stock-name"><i class="fas fa-microchip" style="margin-right:8px;"></i>NVIDIA (NVDA)</span>
+                            <span class="stock-price" id="price-NVDA">$131.29</span>
+                            <span class="stock-change positive" id="change-NVDA">+3.12%</span>
+                        </div>
+                        <div class="stock-list-item" data-symbol="META">
+                            <span class="stock-name"><i class="fab fa-meta" style="margin-right:8px;"></i>Meta (META)</span>
+                            <span class="stock-price" id="price-META">$622.31</span>
+                            <span class="stock-change negative" id="change-META">-0.54%</span>
+                        </div>
+                        <div class="stock-list-item" data-symbol="NFLX">
+                            <span class="stock-name"><i class="fas fa-film" style="margin-right:8px;"></i>Netflix (NFLX)</span>
+                            <span class="stock-price" id="price-NFLX">$1,098.72</span>
+                            <span class="stock-change positive" id="change-NFLX">+0.91%</span>
+                        </div>
+                    </div>
+                    <p style="text-align:center; font-size:0.72rem; color:var(--text-muted); margin-top:8px;" id="stock-last-updated">Fetching live prices…</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Private Client Group -->
+    <section class="private-client">
+        <div class="container">
+            <div class="pcg-grid">
+                <div class="pcg-image reveal">
+                    <img src="images/Image 5.png" alt="SBM Bank and Interactive Brokers partnership — 2-in-1 Banking and Brokerage" loading="lazy">
+                </div>
+                <div class="reveal reveal-delay-1">
+                    <div class="section-label" style="justify-content:flex-start;">Private Client Group</div>
+                    <h2 class="section-title" style="text-align:left;">Comprehensive <span class="highlight">Wealth Management</span></h2>
+                    <p style="color: var(--text-muted); margin-bottom: 8px; font-size: 0.95rem;">End-to-end wealth management services including investment management, estate planning, tax advice, and growth strategies across all asset classes.</p>
+                    <div class="pcg-services">
+                        <div class="pcg-tag">Listed & Unlisted Equity</div>
+                        <div class="pcg-tag">Mutual Funds & ETFs</div>
+                        <div class="pcg-tag">Fixed Income Solutions</div>
+                        <div class="pcg-tag">International Investing</div>
+                        <div class="pcg-tag">Insurance Solutions</div>
+                        <div class="pcg-tag">Estate & Tax Planning</div>
+                        <div class="pcg-tag">NRI Services</div>
+                        <div class="pcg-tag">Golden Visa Advisory</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section>
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Why WealthBridge</div>
+                <h2 class="section-title">Built for <span class="highlight">Modern Investors</span></h2>
+            </div>
+            <div class="why-grid">
+                <div class="why-card reveal">
+                    <div class="why-icon"><i class="fas fa-shield-alt"></i></div>
+                    <h4>Safe & Secure</h4>
+                    <p>Regulated by SEBI and top global financial authorities. Your investments are always protected.</p>
+                </div>
+                <div class="why-card reveal reveal-delay-1">
+                    <div class="why-icon"><i class="fas fa-bolt"></i></div>
+                    <h4>Lightning Fast</h4>
+                    <p>Execute trades in milliseconds with our cutting-edge technology infrastructure.</p>
+                </div>
+                <div class="why-card reveal reveal-delay-2">
+                    <div class="why-icon"><i class="fas fa-headset"></i></div>
+                    <h4>Expert Support</h4>
+                    <p>Dedicated relationship managers with 15+ years of wealth management experience.</p>
+                </div>
+                <div class="why-card reveal reveal-delay-3">
+                    <div class="why-icon"><i class="fas fa-eye"></i></div>
+                    <h4>Full Transparency</h4>
+                    <p>No hidden fees. Clear reporting. Complete visibility into your portfolio at all times.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Safety & Transparency -->
+    <section class="section-alt">
+        <div class="container">
+            <div class="section-header reveal">
+                <div class="section-label">Trust & Safety</div>
+                <h2 class="section-title">Safety & <span class="highlight">Transparency</span></h2>
+                <p class="section-subtitle">We maintain the highest standards of security and regulatory compliance to protect your wealth.</p>
+            </div>
+            <div class="safety-grid">
+                <div class="safety-card reveal">
+                    <div class="safety-icon"><i class="fas fa-bridge"></i></div>
+                    <h3>Bridge the World</h3>
+                    <p>Creating a bridge between India and global markets, making Indians true global citizens with the best investment opportunities worldwide.</p>
+                </div>
+                <div class="safety-card reveal reveal-delay-1">
+                    <div class="safety-icon"><i class="fas fa-hands-holding"></i></div>
+                    <h3>Simple, Safe & Seamless</h3>
+                    <p>A human-centric approach to online wealth management, making investing and growing your wealth simple, safe, and seamless.</p>
+                </div>
+                <div class="safety-card reveal reveal-delay-2">
+                    <div class="safety-icon"><i class="fas fa-lock"></i></div>
+                    <h3>Safety & Transparency</h3>
+                    <p>Creating ever new and higher standards on safety and transparency with complete regulatory compliance.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container reveal">
+            <h2>Ready to Grow Your <span class="highlight">Wealth?</span></h2>
+            <p>Join thousands of investors who trust WealthBridge for their global investment needs.</p>
+            <div style="display:flex; gap:16px; justify-content:center;">
+                <a href="contact.html" class="btn btn-primary">Get Started Today <i class="fas fa-arrow-right"></i></a>
+                <a href="tel:+919311778137" class="btn btn-outline"><i class="fas fa-phone"></i> Call Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/Image 11.png" alt="WealthBridge" style="height:46px; width:auto; margin-bottom:4px; filter: invert(1); mix-blend-mode: screen;">
+                    <p>A new age Wealth Manager creating a bridge between India and the rest of the world, making Indians true global citizens.</p>
+                    <div class="footer-social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-x-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="global-markets.html">Global Markets</a></li>
+                        <li><a href="unlisted.html">Unlisted Shares</a></li>
+                        <li><a href="golden-visas.html">Golden Visas</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" style="color:rgba(255,255,255,0.6);margin-right:8px;"></i> 97 Shanti Kunj, New Delhi 110070</li>
+                        <li><i class="fas fa-phone" style="color:rgba(255,255,255,0.6);margin-right:8px;"></i> +91 9311778137</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025 WealthBridge. All rights reserved.</span>
+                <span>SEBI Registered | AMFI Certified</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+    (function() {
+        const symbols = ['AAPL','MSFT','GOOGL','AMZN','TSLA','NVDA','META','NFLX'];
+
+        function updateStock(symbol, price, changePercent) {
+            const priceEl = document.getElementById('price-' + symbol);
+            const changeEl = document.getElementById('change-' + symbol);
+            if (!priceEl || !changeEl) return;
+
+            const formattedPrice = '$' + price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            const sign = changePercent >= 0 ? '+' : '';
+            const formattedChange = sign + changePercent.toFixed(2) + '%';
+
+            priceEl.textContent = formattedPrice;
+            changeEl.textContent = formattedChange;
+            changeEl.className = 'stock-change ' + (changePercent >= 0 ? 'positive' : 'negative');
+        }
+
+        function fetchPrices() {
+            const url = 'https://query1.finance.yahoo.com/v7/finance/quote?symbols=' + symbols.join(',') + '&fields=regularMarketPrice,regularMarketChangePercent';
+            fetch(url, { headers: { 'Accept': 'application/json' } })
+                .then(r => r.json())
+                .then(data => {
+                    const quotes = data.quoteResponse && data.quoteResponse.result;
+                    if (!quotes) return;
+                    quotes.forEach(q => {
+                        updateStock(q.symbol, q.regularMarketPrice, q.regularMarketChangePercent);
+                    });
+                    const now = new Date();
+                    const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+                    const el = document.getElementById('stock-last-updated');
+                    if (el) el.textContent = 'Live data · Updated ' + timeStr + ' · Prices indicative only';
+                })
+                .catch(() => {
+                    const el = document.getElementById('stock-last-updated');
+                    if (el) el.textContent = 'Prices are indicative only. Markets may be closed.';
+                });
+        }
+
+        fetchPrices();
+        setInterval(fetchPrices, 60000);
+    })();
+    </script>
+</body>
+</html>

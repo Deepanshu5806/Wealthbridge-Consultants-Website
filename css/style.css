@@ -114,7 +114,7 @@ ul { list-style: none; }
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 120px;
+    height: 72px;
 }
 
 .nav-logo {
@@ -223,7 +223,7 @@ ul { list-style: none; }
     align-items: center;
     position: relative;
     background: var(--gradient-hero);
-    padding-top: 164px;
+    padding-top: 160px;
     overflow: hidden;
     color: #ffffff;
 }

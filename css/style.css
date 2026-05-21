@@ -108,13 +108,14 @@ ul { list-style: none; }
 }
 
 .nav-container {
-    max-width: 1300px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 32px;
+    padding: 0 40px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    height: 72px;
+    height: 80px;
+    width: 100%;
 }
 
 .nav-logo {
@@ -125,6 +126,7 @@ ul { list-style: none; }
     font-weight: 700;
     color: var(--navy);
     letter-spacing: -0.5px;
+    flex-shrink: 0;
 }
 
 .nav-logo-img {
@@ -155,7 +157,9 @@ ul { list-style: none; }
 .nav-links {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
+    margin-left: auto;
+    padding-right: 16px;
 }
 
 .nav-links a {
@@ -224,7 +228,7 @@ ul { list-style: none; }
     align-items: center;
     position: relative;
     background: var(--gradient-hero);
-    padding-top: 160px;
+    padding-top: 168px;
     overflow: hidden;
     color: #ffffff;
 }

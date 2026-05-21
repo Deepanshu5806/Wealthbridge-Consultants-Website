@@ -128,9 +128,10 @@ ul { list-style: none; }
 }
 
 .nav-logo-img {
-    height: 108px;
+    height: 46px;
     width: auto;
     display: block;
+    object-fit: contain;
 }
 
 .nav-logo .logo-icon {

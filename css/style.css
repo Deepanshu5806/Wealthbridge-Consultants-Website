@@ -819,9 +819,10 @@ section {
                Golden Visa, Insights (homepage untouched)
    ═══════════════════════════════════════════════════════════ */
 .page-hero {
-    /* Compact hero with centered content */
-    padding: 50px 20px 25px;
-    min-height: 240px;
+    /* Top padding clears fixed ticker(44px) + navbar(80px) = 124px.
+       Zero bottom padding lets flexbox center content in visible area */
+    padding: 130px 20px 28px;
+    min-height: 0;
 
     /* Layout */
     display: flex;
@@ -920,7 +921,7 @@ section {
     background: linear-gradient(90deg,
         rgba(212,175,55,1),
         rgba(212,175,55,0.12));
-    margin: 0 auto 0px;
+    margin: 0 auto 12px;
     border-radius: 2px;
     animation: heroAccentGrow 0.6s cubic-bezier(0.16,1,0.3,1) 0.1s both;
     transform: scaleX(0);
@@ -933,10 +934,11 @@ section {
     font-size: clamp(1.65rem, 3.6vw, 2.75rem);
     font-weight: 800;
     letter-spacing: -0.4px;
-    line-height: 1.0;
+    line-height: 1.05;
     color: #fff;
     position: relative;
     z-index: 1;
+    margin: 0;
     /* Subtle luminous glow — makes text feel lit */
     text-shadow:
         0 0 60px rgba(255,255,255,0.09),
@@ -955,8 +957,8 @@ section {
 .page-hero p {
     font-size: 0.92rem;
     color: rgba(255,255,255,0.52);
-    margin-top: 14px;
-    line-height: 1.8;
+    margin-top: 6px;
+    line-height: 1.5;
     letter-spacing: 0.015em;
     max-width: 460px;
     margin-left: auto;
@@ -973,7 +975,7 @@ section {
     width: 24px;
     height: 1px;
     background: rgba(212,175,55,0.30);
-    margin: 16px auto 0;
+    margin: 12px auto 0;
     border-radius: 2px;
 }
 
@@ -2123,8 +2125,8 @@ section {
 
     /* --- Page Hero --- */
     .page-hero {
-        padding: 96px 20px 44px;
-        min-height: 190px;
+        padding: 100px 16px 22px;
+        min-height: 0;
     }
     .page-hero p {
         font-size: 0.86rem;

@@ -829,98 +829,119 @@ section {
     color: #ffffff;
 }
 
-/* Grid lines */
+/* Animated grid — slow drift creates depth */
 .page-hero::before {
     content: '';
     position: absolute;
-    top: 0; left: 0; width: 100%; height: 100%;
+    inset: -60px;
     background-image:
-        linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-    background-size: 60px 60px;
+        linear-gradient(rgba(255,255,255,0.022) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.022) 1px, transparent 1px);
+    background-size: 64px 64px;
+    animation: heroGridDrift 24s linear infinite;
     pointer-events: none;
 }
 
-/* Gold glow orb top-right + blue glow bottom-left */
+/* Gold glow orb — slow cinematic float */
 .page-hero::after {
     content: '';
     position: absolute;
-    width: 700px;
-    height: 700px;
+    width: 560px;
+    height: 560px;
     border-radius: 50%;
-    background: radial-gradient(circle, rgba(212,175,55,0.18) 0%, rgba(26,69,112,0.1) 40%, transparent 70%);
-    top: -260px;
-    right: -180px;
+    background: radial-gradient(circle, rgba(212,175,55,0.10) 0%, rgba(26,69,112,0.06) 45%, transparent 70%);
+    top: -180px;
+    right: -120px;
     pointer-events: none;
 }
 
-/* Decorative ring */
+/* Soft spotlight behind heading */
 .page-hero .particles::before {
     content: '';
     position: absolute;
-    width: 500px;
-    height: 500px;
-    border: 1px solid rgba(212,175,55,0.15);
+    width: 700px;
+    height: 260px;
     border-radius: 50%;
-    bottom: -200px;
-    left: -150px;
+    background: radial-gradient(ellipse, rgba(255,255,255,0.045) 0%, transparent 68%);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: heroSpotlight 7s ease-in-out infinite;
     pointer-events: none;
 }
 
+/* Bottom blue left-glow ring */
 .page-hero .particles::after {
     content: '';
     position: absolute;
-    width: 320px;
-    height: 320px;
-    border: 1px solid rgba(255,255,255,0.08);
+    width: 380px;
+    height: 380px;
+    border: 1px solid rgba(212,175,55,0.07);
     border-radius: 50%;
-    bottom: -80px;
-    left: -30px;
+    bottom: -180px;
+    left: -100px;
+    animation: heroRingFloat 20s ease-in-out infinite;
     pointer-events: none;
 }
 
 .page-hero h1 {
-    font-size: clamp(1.6rem, 4vw, 2.6rem);
+    font-size: clamp(1.65rem, 3.8vw, 2.7rem);
     font-weight: 800;
     letter-spacing: -0.5px;
+    line-height: 1.2;
     position: relative;
-    color: #ffffff;
+    color: #fff;
+    text-shadow: 0 0 80px rgba(255,255,255,0.1), 0 2px 24px rgba(0,0,0,0.35);
+    animation: heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) forwards;
+    opacity: 0;
+    transform: translateY(22px);
+    will-change: transform, opacity;
 }
 
 /* Decorative accent line above heading */
 .page-hero h1::before {
     content: '';
     display: block;
-    width: 44px;
-    height: 3px;
-    background: linear-gradient(90deg, var(--accent), rgba(212,175,55,0.3));
-    margin: 0 auto 12px;
-    border-radius: 3px;
+    width: 36px;
+    height: 2px;
+    background: linear-gradient(90deg, rgba(212,175,55,0.95), rgba(212,175,55,0.15));
+    margin: 0 auto 14px;
+    border-radius: 2px;
+    animation: heroAccentGrow 0.7s cubic-bezier(0.16,1,0.3,1) 0.25s both;
+    transform-origin: center;
+    transform: scaleX(0);
+    opacity: 0;
 }
 
 .page-hero h1 .highlight {
     color: #ffffff;
-    text-shadow: 0 0 40px rgba(255,255,255,0.35);
+    text-shadow: 0 0 50px rgba(255,255,255,0.28), 0 0 100px rgba(212,175,55,0.1);
 }
 
 .page-hero p {
-    font-size: 1rem;
-    color: rgba(255, 255, 255, 0.75);
-    margin-top: 10px;
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.58);
+    margin-top: 12px;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
     position: relative;
-    max-width: 560px;
+    max-width: 480px;
     margin-left: auto;
     margin-right: auto;
+    animation: heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) 0.18s forwards;
+    opacity: 0;
+    transform: translateY(16px);
+    will-change: transform, opacity;
 }
 
 /* Decorative bottom separator */
 .page-hero p::after {
     content: '';
     display: block;
-    width: 40px;
-    height: 2px;
-    background: rgba(212,175,55,0.5);
-    margin: 16px auto 0;
+    width: 28px;
+    height: 1.5px;
+    background: rgba(212,175,55,0.35);
+    margin: 14px auto 0;
     border-radius: 2px;
 }
 
@@ -1924,8 +1945,8 @@ section {
         letter-spacing: -0.5px;
     }
     .page-hero h1 {
-        font-size: clamp(1.8rem, 7vw, 2.4rem);
-        animation: none;
+        font-size: clamp(1.55rem, 6.5vw, 2.1rem);
+        animation: heroFadeUp 0.9s cubic-bezier(0.16,1,0.3,1) forwards;
     }
     .cta-section h2 {
         font-size: clamp(1.6rem, 6vw, 2rem);
@@ -2070,12 +2091,13 @@ section {
 
     /* --- Page Hero --- */
     .page-hero {
-        padding: 96px 0 28px;
-        min-height: 170px;
+        padding: 94px 0 28px;
+        min-height: 165px;
     }
     .page-hero p {
-        font-size: 0.95rem;
-        padding: 0 16px;
+        font-size: 0.88rem;
+        padding: 0 20px;
+        max-width: 100%;
     }
 
     /* --- CTA inline flex --- */
@@ -2109,7 +2131,7 @@ section {
         font-size: clamp(1.4rem, 7vw, 1.75rem);
     }
     .page-hero h1 {
-        font-size: clamp(1.6rem, 8vw, 2rem);
+        font-size: clamp(1.4rem, 7.5vw, 1.8rem);
     }
     .stats-grid {
         grid-template-columns: repeat(2, 1fr);
@@ -2206,7 +2228,7 @@ section {
         font-size: 1.4rem;
     }
     .page-hero h1 {
-        font-size: 1.55rem;
+        font-size: 1.35rem;
     }
     .cta-section h2 {
         font-size: 1.4rem;
@@ -2405,14 +2427,28 @@ img {
     transform-style: preserve-3d;
 }
 
-/* Page hero heading — gentle float */
-@keyframes titleFloat {
-    0%, 100% { transform: translateY(0px); }
-    50%       { transform: translateY(-7px); }
+/* ── Premium inner-page hero entrance animations ─────────── */
+@keyframes heroFadeUp {
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.page-hero h1 {
-    animation: titleFloat 5s ease-in-out infinite;
+@keyframes heroAccentGrow {
+    to { opacity: 1; transform: scaleX(1); }
+}
+
+@keyframes heroGridDrift {
+    0%   { transform: translate(0, 0); }
+    100% { transform: translate(64px, 64px); }
+}
+
+@keyframes heroSpotlight {
+    0%, 100% { opacity: 0.7; transform: translate(-50%, -50%) scale(1); }
+    50%       { opacity: 1;   transform: translate(-50%, -50%) scale(1.18); }
+}
+
+@keyframes heroRingFloat {
+    0%, 100% { transform: translate(0, 0)      rotate(0deg); }
+    50%       { transform: translate(16px,-24px) rotate(30deg); }
 }
 
 /* Stat items — staggered pop-in pulse */
@@ -2500,14 +2536,14 @@ img {
     animation: labelPulse 3s ease-in-out infinite;
 }
 
-/* Page-hero orb — slow drift */
+/* Page-hero orb — cinematic slow drift */
 @keyframes orbDrift {
-    0%, 100% { transform: translate(0, 0) scale(1); }
-    50%       { transform: translate(-30px, 20px) scale(1.08); }
+    0%, 100% { transform: translate(0, 0)       scale(1); }
+    50%       { transform: translate(-28px, 22px) scale(1.1); }
 }
 
 .page-hero::after {
-    animation: orbDrift 10s ease-in-out infinite;
+    animation: orbDrift 14s ease-in-out infinite;
 }
 
 /* Footer social icons — 3D bounce */

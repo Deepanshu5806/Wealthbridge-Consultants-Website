@@ -5,7 +5,7 @@
    from https://sanity.io/manage  after creating your project.
    ============================================================ */
 
-var SANITY_PROJECT_ID  = 'YOUR_PROJECT_ID'; // ← paste your ID here
+var SANITY_PROJECT_ID  = '1265gvop';
 var SANITY_DATASET     = 'production';
 var SANITY_API_VERSION = '2024-01-01';
 

@@ -10,7 +10,7 @@ export default defineConfig({
   // ──────────────────────────────────────────────────────────────
   // IMPORTANT: replace with your own Project ID from sanity.io/manage
   // ──────────────────────────────────────────────────────────────
-  projectId: 'YOUR_PROJECT_ID',
+  projectId: '1265gvop',
   dataset:   'production',
 
   plugins: [

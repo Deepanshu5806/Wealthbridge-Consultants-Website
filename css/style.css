@@ -819,10 +819,10 @@ section {
                Golden Visa, Insights (homepage untouched)
    ═══════════════════════════════════════════════════════════ */
 .page-hero {
-    /* Spacing: top clears fixed ticker + navbar (~114px). Bottom
-       is generous so content feels visually centered, not top-heavy */
-    padding: 118px 20px 58px;
-    min-height: 250px;
+    /* Spacing: minimal top padding for breathing room below fixed nav.
+       Larger min-height allows flex centering to work in the full visual box */
+    padding: 20px 20px 40px;
+    min-height: 380px;
 
     /* Layout */
     display: flex;

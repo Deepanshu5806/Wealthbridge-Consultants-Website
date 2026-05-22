@@ -2537,3 +2537,255 @@ img {
 .safety-card:nth-child(1):hover { border-color: rgba(59,130,246,0.4); box-shadow: 0 20px 40px rgba(59,130,246,0.12); }
 .safety-card:nth-child(2):hover { border-color: rgba(139,92,246,0.4); box-shadow: 0 20px 40px rgba(139,92,246,0.12); }
 .safety-card:nth-child(3):hover { border-color: rgba(16,185,129,0.4); box-shadow: 0 20px 40px rgba(16,185,129,0.12); }
+
+
+/* =============================================================
+   WEALTHBRIDGE LEAD CAPTURE SYSTEM — Component Styles
+   ============================================================= */
+
+/* ── Floating WhatsApp Button ─────────────────────────────── */
+#wb-wa-float {
+    position: fixed;
+    bottom: 28px;
+    right: 28px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #25d366;
+    color: #fff;
+    text-decoration: none;
+    padding: 13px 20px 13px 16px;
+    border-radius: 50px;
+    box-shadow: 0 6px 28px rgba(37, 211, 102, 0.45), 0 2px 8px rgba(0,0,0,0.12);
+    font-family: 'Calibri', 'Segoe UI', Arial, sans-serif;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+    pointer-events: none;
+    transition: opacity 0.35s ease, transform 0.35s ease, box-shadow 0.25s ease, background 0.2s ease;
+}
+#wb-wa-float.wb-wa-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+    pointer-events: auto;
+}
+#wb-wa-float:hover {
+    background: #20ba5a;
+    box-shadow: 0 10px 36px rgba(37, 211, 102, 0.55), 0 3px 10px rgba(0,0,0,0.14);
+    transform: translateY(-2px) scale(1.02);
+    color: #fff;
+}
+.wb-wa-icon {
+    font-size: 1.4rem;
+    line-height: 1;
+}
+.wb-wa-label {
+    white-space: nowrap;
+}
+@media (max-width: 480px) {
+    #wb-wa-float {
+        bottom: 20px;
+        right: 16px;
+        padding: 12px 16px 12px 14px;
+        font-size: 0.82rem;
+        gap: 8px;
+    }
+    .wb-wa-icon { font-size: 1.25rem; }
+}
+
+/* ── WhatsApp CTA Buttons ─────────────────────────────────── */
+.btn-whatsapp {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #25d366;
+    color: #fff !important;
+    border: 2px solid transparent;
+    padding: 13px 28px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    text-decoration: none;
+    transition: var(--transition);
+    letter-spacing: 0.3px;
+    font-family: inherit;
+}
+.btn-whatsapp:hover {
+    background: #20ba5a;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(37, 211, 102, 0.4);
+    color: #fff !important;
+}
+.btn-whatsapp i { font-size: 1.1rem; }
+
+/* ── Contact Form — Field Validation States ───────────────── */
+.wb-field-error {
+    border-color: #ef4444 !important;
+    background: rgba(239, 68, 68, 0.04) !important;
+    box-shadow: 0 0 0 3px rgba(239, 68, 68, 0.12) !important;
+}
+.wb-error-hint {
+    display: block;
+    color: #ef4444;
+    font-size: 0.78rem;
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+/* ── Success / Error Status Boxes ────────────────────────── */
+#wb-form-success,
+#wb-form-error {
+    display: none;
+    align-items: flex-start;
+    gap: 14px;
+    padding: 18px 22px;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    font-size: 0.9rem;
+    line-height: 1.6;
+}
+#wb-form-success {
+    background: rgba(16, 185, 129, 0.08);
+    border: 1px solid rgba(16, 185, 129, 0.3);
+    color: #065f46;
+}
+#wb-form-error {
+    background: rgba(239, 68, 68, 0.07);
+    border: 1px solid rgba(239, 68, 68, 0.25);
+    color: #7f1d1d;
+}
+#wb-form-success .wb-status-icon,
+#wb-form-error   .wb-status-icon {
+    font-size: 1.25rem;
+    flex-shrink: 0;
+    margin-top: 1px;
+}
+#wb-form-success .wb-status-icon { color: #10b981; }
+#wb-form-error   .wb-status-icon { color: #ef4444; }
+#wb-form-success strong,
+#wb-form-error   strong {
+    display: block;
+    margin-bottom: 2px;
+    font-size: 0.95rem;
+}
+
+/* ── Submit Button — Loading State ───────────────────────── */
+.wb-btn-loading {
+    opacity: 0.78;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+.wb-btn-spinner {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    border: 2px solid rgba(255,255,255,0.4);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: wb-spin 0.7s linear infinite;
+    vertical-align: middle;
+    margin-right: 8px;
+    flex-shrink: 0;
+}
+@keyframes wb-spin {
+    to { transform: rotate(360deg); }
+}
+
+/* ── Honeypot (anti-spam hidden field) ───────────────────── */
+.wb-hp-field {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+/* ── Department Contact Cards (contact page quick-access) ── */
+.wb-dept-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+.wb-dept-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: var(--transition);
+}
+.wb-dept-card:hover {
+    border-color: var(--border-hover);
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+.wb-dept-card .wb-dept-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 10px;
+    font-size: 1.1rem;
+}
+.wb-dept-card h4 {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 6px;
+}
+.wb-dept-card p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 12px;
+    line-height: 1.5;
+}
+.wb-dept-btn-row {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.wb-dept-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 13px;
+    border-radius: 30px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: var(--transition);
+    font-family: inherit;
+}
+.wb-dept-btn.call {
+    background: rgba(15, 43, 74, 0.08);
+    color: var(--navy);
+    border: 1px solid rgba(15, 43, 74, 0.15);
+}
+.wb-dept-btn.call:hover {
+    background: var(--navy);
+    color: #fff;
+}
+.wb-dept-btn.whatsapp {
+    background: rgba(37, 211, 102, 0.1);
+    color: #15803d;
+    border: 1px solid rgba(37, 211, 102, 0.25);
+}
+.wb-dept-btn.whatsapp:hover {
+    background: #25d366;
+    color: #fff;
+}
+@media (max-width: 540px) {
+    .wb-dept-cards { grid-template-columns: 1fr; }
+}

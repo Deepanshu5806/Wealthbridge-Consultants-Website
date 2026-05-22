@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us — WealthBridge</title>
-    <!-- Using system Calibri font -->
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
@@ -70,14 +69,52 @@
     <section>
         <div class="container">
             <div class="contact-grid">
-                <!-- Contact Info -->
+
+                <!-- ── Left: Contact Info ── -->
                 <div class="reveal">
                     <div class="section-label" style="justify-content:flex-start;">Get in Touch</div>
                     <h2 class="section-title" style="text-align:left; font-size:2.2rem;">We'd Love to <span class="highlight">Hear From You</span></h2>
-                    <p style="color: var(--text-muted); margin-bottom: 40px; font-size: 0.95rem; line-height: 1.8;">
-                        Whether you're interested in global markets, unlisted shares, golden visas, or comprehensive wealth management — our team of experts is here to help you make informed decisions.
+                    <p style="color: var(--text-muted); margin-bottom: 32px; font-size: 0.95rem; line-height: 1.8;">
+                        Whether you're interested in global markets, private equity, golden visas, or comprehensive wealth management — our team of experts is here to help you make informed decisions.
                     </p>
 
+                    <!-- Department Quick-Connect Cards -->
+                    <div class="wb-dept-cards">
+                        <!-- Global Markets -->
+                        <div class="wb-dept-card">
+                            <div class="wb-dept-icon" style="background:rgba(59,130,246,0.12);color:#3b82f6;">
+                                <i class="fas fa-globe"></i>
+                            </div>
+                            <h4>Global Markets</h4>
+                            <p>International stocks, ETFs & foreign investments</p>
+                            <div class="wb-dept-btn-row">
+                                <a href="tel:+919311778137" class="wb-dept-btn call">
+                                    <i class="fas fa-phone"></i> Call
+                                </a>
+                                <button onclick="wbWhatsApp('globalMarkets')" class="wb-dept-btn whatsapp">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                        <!-- Private Equity -->
+                        <div class="wb-dept-card">
+                            <div class="wb-dept-icon" style="background:rgba(139,92,246,0.12);color:#8b5cf6;">
+                                <i class="fas fa-lock"></i>
+                            </div>
+                            <h4>Private Equity</h4>
+                            <p>Unlisted shares, pre-IPO & alternate investments</p>
+                            <div class="wb-dept-btn-row">
+                                <a href="tel:+919013332500" class="wb-dept-btn call">
+                                    <i class="fas fa-phone"></i> Call
+                                </a>
+                                <button onclick="wbWhatsApp('privateEquity')" class="wb-dept-btn whatsapp">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Info List -->
                     <div class="contact-info">
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
@@ -90,14 +127,20 @@
                             <div class="contact-icon"><i class="fas fa-phone"></i></div>
                             <div>
                                 <h4>Telephone</h4>
-                                <p>+91 9311778137</p>
+                                <p>
+                                    <a href="tel:+919311778137" style="color:var(--navy);text-decoration:none;">+91 93117 78137</a>
+                                    &nbsp;|&nbsp;
+                                    <a href="tel:+919013332500" style="color:var(--navy);text-decoration:none;">+91 90133 32500</a>
+                                </p>
                             </div>
                         </div>
                         <div class="contact-item">
                             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                             <div>
                                 <h4>Email</h4>
-                                <p>info@wealthbridgeindia.com</p>
+                                <p>
+                                    <a href="mailto:info@wealthbridge.com" style="color:var(--navy);text-decoration:none;">info@wealthbridge.com</a>
+                                </p>
                             </div>
                         </div>
                         <div class="contact-item">
@@ -113,62 +156,93 @@
                     <div style="margin-top: 36px;">
                         <h4 style="font-size: 0.88rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--navy); margin-bottom: 16px;">Follow Us</h4>
                         <div class="footer-social">
-                            <a href="#" style="background:rgba(12,35,64,0.06);border-color:var(--border);color:var(--navy);"><i class="fab fa-facebook-f"></i></a>
-                            <a href="#" style="background:rgba(12,35,64,0.06);border-color:var(--border);color:var(--navy);"><i class="fab fa-x-twitter"></i></a>
-                            <a href="#" style="background:rgba(12,35,64,0.06);border-color:var(--border);color:var(--navy);"><i class="fab fa-instagram"></i></a>
-                            <a href="#" style="background:rgba(12,35,64,0.06);border-color:var(--border);color:var(--navy);"><i class="fab fa-linkedin-in"></i></a>
-                            <a href="#" style="background:rgba(12,35,64,0.06);border-color:var(--border);color:var(--navy);"><i class="fab fa-youtube"></i></a>
+                            <a href="https://www.facebook.com/wealthbridgeindia/" target="_blank" rel="noopener" style="background:rgba(12,35,64,0.06);border-color:var(--border);color:var(--navy);"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://x.com/WealthBridgeIN?s=09" target="_blank" rel="noopener" style="background:rgba(12,35,64,0.06);border-color:var(--border);color:var(--navy);"><i class="fab fa-x-twitter"></i></a>
+                            <a href="https://www.instagram.com/wealthbridgeconsultants" target="_blank" rel="noopener" style="background:rgba(12,35,64,0.06);border-color:var(--border);color:var(--navy);"><i class="fab fa-instagram"></i></a>
+                            <a href="https://www.linkedin.com/company/wealth-bridge-india/posts/?feedView=all&viewAsMember=true" target="_blank" rel="noopener" style="background:rgba(12,35,64,0.06);border-color:var(--border);color:var(--navy);"><i class="fab fa-linkedin-in"></i></a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Contact Form -->
+                <!-- ── Right: Contact Form ── -->
                 <div class="contact-form reveal reveal-delay-2">
                     <h3 style="font-size: 1.3rem; font-weight: 700; color: var(--navy); margin-bottom: 8px;">Send Us a Message</h3>
                     <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 28px;">Fill in the form below and our team will get back to you within 24 hours.</p>
 
-                    <form onsubmit="event.preventDefault(); alert('Thank you for your message! Our team will contact you within 24 hours.'); this.reset();">
+                    <!-- Success Message -->
+                    <div id="wb-form-success">
+                        <span class="wb-status-icon"><i class="fas fa-check-circle"></i></span>
+                        <div>
+                            <strong>Message sent successfully!</strong>
+                            Our team will reach out to you within 24 hours. You can also WhatsApp us for a quicker response.
+                        </div>
+                    </div>
+
+                    <!-- Error Message -->
+                    <div id="wb-form-error">
+                        <span class="wb-status-icon"><i class="fas fa-exclamation-circle"></i></span>
+                        <div>
+                            <strong>Something went wrong.</strong>
+                            Please try again, or contact us directly at <a href="mailto:info@wealthbridge.com" style="color:inherit;">info@wealthbridge.com</a>
+                        </div>
+                    </div>
+
+                    <form id="wb-contact-form" novalidate>
+                        <!-- Honeypot anti-spam -->
+                        <div class="wb-hp-field" aria-hidden="true">
+                            <label for="wb-hp">Leave this blank</label>
+                            <input type="text" id="wb-hp" name="website" tabindex="-1" autocomplete="off">
+                        </div>
+
                         <div class="form-row">
                             <div class="form-group">
-                                <label>First Name</label>
-                                <input type="text" placeholder="John" required>
+                                <label for="wb-first-name">First Name <span style="color:#ef4444;">*</span></label>
+                                <input type="text" id="wb-first-name" name="firstName" placeholder="Rahul" autocomplete="given-name">
                             </div>
                             <div class="form-group">
-                                <label>Last Name</label>
-                                <input type="text" placeholder="Doe" required>
+                                <label for="wb-last-name">Last Name <span style="color:#ef4444;">*</span></label>
+                                <input type="text" id="wb-last-name" name="lastName" placeholder="Sharma" autocomplete="family-name">
                             </div>
                         </div>
+
                         <div class="form-row">
                             <div class="form-group">
-                                <label>Email Address</label>
-                                <input type="email" placeholder="john@example.com" required>
+                                <label for="wb-email">Email Address <span style="color:#ef4444;">*</span></label>
+                                <input type="email" id="wb-email" name="email" placeholder="rahul@example.com" autocomplete="email">
                             </div>
                             <div class="form-group">
-                                <label>Phone Number</label>
-                                <input type="tel" placeholder="+91 9876543210" required>
+                                <label for="wb-phone">Phone Number <span style="color:#ef4444;">*</span></label>
+                                <input type="tel" id="wb-phone" name="phone" placeholder="+91 98765 43210" autocomplete="tel">
                             </div>
                         </div>
+
                         <div class="form-group">
-                            <label>I'm Interested In</label>
-                            <select required>
+                            <label for="wb-interest">I'm Interested In <span style="color:#ef4444;">*</span></label>
+                            <select id="wb-interest" name="interest">
                                 <option value="" disabled selected>Select a service</option>
-                                <option>Global Markets</option>
-                                <option>Private Equity</option>
-                                <option>Golden Visa</option>
-                                <option>Private Client Group</option>
-                                <option>Mutual Funds & ETFs</option>
-                                <option>Insurance Solutions</option>
-                                <option>NRI Services</option>
-                                <option>Other</option>
+                                <option value="Global Markets">Global Markets</option>
+                                <option value="Private Equity">Private Equity / Unlisted Shares</option>
+                                <option value="Golden Visa">Golden Visa</option>
+                                <option value="Private Client Group">Private Client Group</option>
+                                <option value="Mutual Funds & ETFs">Mutual Funds &amp; ETFs</option>
+                                <option value="Insurance Solutions">Insurance Solutions</option>
+                                <option value="NRI Services">NRI Services</option>
+                                <option value="Other">Other / General Enquiry</option>
                             </select>
                         </div>
+
                         <div class="form-group">
-                            <label>Your Message</label>
-                            <textarea placeholder="Tell us about your investment goals and how we can help..." rows="5"></textarea>
+                            <label for="wb-message">Your Message</label>
+                            <textarea id="wb-message" name="message" placeholder="Tell us about your investment goals and how we can help…" rows="5"></textarea>
                         </div>
-                        <button type="submit" class="btn btn-primary" style="width:100%; justify-content:center;">
+
+                        <button type="submit" id="wb-submit-btn" class="btn btn-primary" style="width:100%; justify-content:center;">
                             Send Message <i class="fas fa-paper-plane"></i>
                         </button>
+
+                        <p style="font-size:0.75rem;color:var(--text-muted);text-align:center;margin-top:14px;">
+                            <i class="fas fa-lock" style="margin-right:4px;"></i>Your data is secure and will never be shared with third parties.
+                        </p>
                     </form>
                 </div>
             </div>
@@ -206,7 +280,7 @@
                         <span class="faq-icon" style="font-size:1.5rem; color:var(--accent); font-weight:300;">+</span>
                     </div>
                     <div class="faq-answer" style="display:none; margin-top:12px;">
-                        <p>Simply contact our team for a free consultation. We'll help you open an international brokerage account, complete KYC, and guide you through your first investment. The entire process can be completed within 3-5 business days.</p>
+                        <p>Simply contact our team for a free consultation. We'll help you open an international brokerage account, complete KYC, and guide you through your first investment. The entire process can be completed within 3–5 business days.</p>
                     </div>
                 </div>
                 <div class="service-card reveal reveal-delay-1" style="cursor:pointer;" onclick="this.querySelector('.faq-answer').style.display = this.querySelector('.faq-answer').style.display === 'block' ? 'none' : 'block'; this.querySelector('.faq-icon').textContent = this.querySelector('.faq-answer').style.display === 'block' ? '−' : '+';">
@@ -215,7 +289,7 @@
                         <span class="faq-icon" style="font-size:1.5rem; color:var(--accent); font-weight:300;">+</span>
                     </div>
                     <div class="faq-answer" style="display:none; margin-top:12px;">
-                        <p>The minimum investment varies by company. Some unlisted shares are available for as low as one lot (typically 25-100 shares). Contact us for current pricing and lot sizes for specific companies.</p>
+                        <p>The minimum investment varies by company. Some unlisted shares are available for as low as one lot (typically 25–100 shares). Contact us for current pricing and lot sizes for specific companies.</p>
                     </div>
                 </div>
                 <div class="service-card reveal reveal-delay-2" style="cursor:pointer;" onclick="this.querySelector('.faq-answer').style.display = this.querySelector('.faq-answer').style.display === 'block' ? 'none' : 'block'; this.querySelector('.faq-icon').textContent = this.querySelector('.faq-answer').style.display === 'block' ? '−' : '+';">
@@ -233,7 +307,7 @@
                         <span class="faq-icon" style="font-size:1.5rem; color:var(--accent); font-weight:300;">+</span>
                     </div>
                     <div class="faq-answer" style="display:none; margin-top:12px;">
-                        <p>We provide end-to-end support. Starting with a free consultation to understand your goals, we then guide you through selecting the right program (UAE or USA EB-5), making the qualifying investment, documentation, and visa application. Most programs are processed within 30-90 days.</p>
+                        <p>We provide end-to-end support. Starting with a free consultation to understand your goals, we guide you through selecting the right program (UAE or USA EB-5), making the qualifying investment, documentation, and visa application. Most programs are processed within 30–90 days.</p>
                     </div>
                 </div>
             </div>
@@ -248,10 +322,10 @@
                     <img src="images/Image 11.png" alt="WealthBridge" style="height:46px; width:auto; margin-bottom:4px; filter: invert(1); mix-blend-mode: screen;">
                     <p>A new age Wealth Manager creating a bridge between India and the rest of the world, making Indians true global citizens.</p>
                     <div class="footer-social">
-                        <a href="https://www.facebook.com/wealthbridgeindia/" target="_blank"><i class="fab fa-facebook-f"></i></a>
-                        <a href="https://x.com/WealthBridgeIN?s=09" target="_blank"><i class="fab fa-x-twitter"></i></a>
-                        <a href="https://www.instagram.com/wealthbridgeconsultants" target="_blank"><i class="fab fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/company/wealth-bridge-india/posts/?feedView=all&viewAsMember=true" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.facebook.com/wealthbridgeindia/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/WealthBridgeIN?s=09" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/wealthbridgeconsultants" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/wealth-bridge-india/posts/?feedView=all&viewAsMember=true" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="footer-col">
@@ -274,7 +348,12 @@
                     <h4>Contact</h4>
                     <ul>
                         <li><i class="fas fa-map-marker-alt" style="color:rgba(255,255,255,0.6);margin-right:8px;"></i> 97 Shanti Kunj, New Delhi 110070</li>
-                        <li><i class="fas fa-phone" style="color:rgba(255,255,255,0.6);margin-right:8px;"></i> +91 9311778137</li>
+                        <li><i class="fas fa-phone" style="color:rgba(255,255,255,0.6);margin-right:8px;"></i>
+                            <a href="tel:+919311778137" style="color:rgba(255,255,255,0.85);text-decoration:none;">+91 93117 78137</a>
+                        </li>
+                        <li><i class="fas fa-phone" style="color:rgba(255,255,255,0.6);margin-right:8px;"></i>
+                            <a href="tel:+919013332500" style="color:rgba(255,255,255,0.85);text-decoration:none;">+91 90133 32500</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -284,6 +363,9 @@
             </div>
         </div>
     </footer>
+
     <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/leads.js"></script>
 </body>
 </html>

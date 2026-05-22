@@ -322,8 +322,11 @@
         <div class="container reveal">
             <h2>Ready to Grow Your <span class="highlight">Wealth?</span></h2>
             <p>Join thousands of investors who trust WealthBridge for their global investment needs.</p>
-            <div style="display:flex; gap:16px; justify-content:center;">
+            <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
                 <a href="contact.html" class="btn btn-primary">Get Started Today <i class="fas fa-arrow-right"></i></a>
+                <button onclick="wbWhatsApp('general')" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Us
+                </button>
                 <a href="tel:+919311778137" class="btn btn-outline"><i class="fas fa-phone"></i> Call Us</a>
             </div>
         </div>
@@ -648,5 +651,7 @@
         if (e.key === 'Escape') closeStockModal();
     });
     </script>
+    <script src="js/config.js"></script>
+    <script src="js/leads.js"></script>
 </body>
 </html>

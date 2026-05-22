@@ -330,9 +330,11 @@
         <div class="container reveal">
             <h2>Interested in <span class="highlight">Unlisted Shares?</span></h2>
             <p>Speak with our experts to get the latest prices and availability for any unlisted stock.</p>
-            <div style="display:flex; gap:16px; justify-content:center;">
-                <a href="contact.html" class="btn btn-primary">Enquire Now <i class="fas fa-arrow-right"></i></a>
-                <a href="tel:+919311778137" class="btn btn-outline"><i class="fas fa-phone"></i> +91 9311778137</a>
+            <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+                <button onclick="wbWhatsApp('privateEquity')" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> Enquire on WhatsApp
+                </button>
+                <a href="tel:+919013332500" class="btn btn-outline"><i class="fas fa-phone"></i> +91 90133 32500</a>
             </div>
         </div>
     </section>
@@ -361,7 +363,9 @@
                 <strong>Disclaimer:</strong> Prices and fundamental data are indicative, compiled from multiple publicly available market sources, and subject to change. Investments are subject to market risk. Please read all investment-related documents carefully before investing.
             </div>
             <div style="margin-top:20px; text-align:center;">
-                <a href="contact.html" class="btn btn-primary">Enquire About This Share <i class="fas fa-arrow-right"></i></a>
+                <button onclick="wbWhatsApp('privateEquity', document.getElementById('modalName').textContent)" class="btn-whatsapp" style="width:100%;justify-content:center;border-radius:12px;">
+                    <i class="fab fa-whatsapp"></i> Enquire About This Share on WhatsApp
+                </button>
             </div>
         </div>
     </div>
@@ -411,5 +415,7 @@
         </div>
     </footer>
     <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/leads.js"></script>
 </body>
 </html>

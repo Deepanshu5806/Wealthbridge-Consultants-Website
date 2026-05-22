@@ -814,8 +814,8 @@ section {
 
 /* ===== ABOUT PAGE ===== */
 .page-hero {
-    padding: 156px 0 60px;
-    min-height: 360px;
+    padding: 116px 0 36px;
+    min-height: 220px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -880,9 +880,9 @@ section {
 }
 
 .page-hero h1 {
-    font-size: clamp(1.9rem, 5vw, 3.4rem);
+    font-size: clamp(1.6rem, 4vw, 2.6rem);
     font-weight: 800;
-    letter-spacing: -1px;
+    letter-spacing: -0.5px;
     position: relative;
     color: #ffffff;
 }
@@ -891,10 +891,10 @@ section {
 .page-hero h1::before {
     content: '';
     display: block;
-    width: 56px;
+    width: 44px;
     height: 3px;
     background: linear-gradient(90deg, var(--accent), rgba(212,175,55,0.3));
-    margin: 0 auto 20px;
+    margin: 0 auto 12px;
     border-radius: 3px;
 }
 
@@ -904,9 +904,9 @@ section {
 }
 
 .page-hero p {
-    font-size: 1.15rem;
+    font-size: 1rem;
     color: rgba(255, 255, 255, 0.75);
-    margin-top: 16px;
+    margin-top: 10px;
     position: relative;
     max-width: 560px;
     margin-left: auto;
@@ -920,7 +920,7 @@ section {
     width: 40px;
     height: 2px;
     background: rgba(212,175,55,0.5);
-    margin: 28px auto 0;
+    margin: 16px auto 0;
     border-radius: 2px;
 }
 
@@ -2070,11 +2070,11 @@ section {
 
     /* --- Page Hero --- */
     .page-hero {
-        padding: 126px 0 40px; /* ticker(44) + navbar(60) + 22 breathing room */
-        min-height: 260px;
+        padding: 96px 0 28px;
+        min-height: 170px;
     }
     .page-hero p {
-        font-size: 1rem;
+        font-size: 0.95rem;
         padding: 0 16px;
     }
 

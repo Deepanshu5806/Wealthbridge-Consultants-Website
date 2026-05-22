@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article — WealthBridge Insights</title>
+    <meta name="description" content="Expert investment insights from WealthBridge.">
+    <meta property="og:title" content="Article — WealthBridge Insights">
+    <meta property="og:description" content="Expert investment insights from WealthBridge.">
+    <meta property="og:type" content="article">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page-loader"><div class="loader-spinner"></div></div>
+
+    <!-- Reading progress bar -->
+    <div id="wb-progress-bar" class="wb-progress-bar"></div>
+
+    <!-- Stock Ticker -->
+    <div class="ticker-ribbon">
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+                "symbols": [
+                    {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
+                    {"proName": "FOREXCOM:NSXUSD", "title": "US 100"},
+                    {"proName": "FX_IDC:EURUSD", "title": "EUR to USD"},
+                    {"description": "Apple",    "proName": "NASDAQ:AAPL"},
+                    {"description": "Tesla",    "proName": "NASDAQ:TSLA"},
+                    {"description": "Microsoft","proName": "NASDAQ:MSFT"},
+                    {"description": "Amazon",   "proName": "NASDAQ:AMZN"},
+                    {"description": "Google",   "proName": "NASDAQ:GOOGL"},
+                    {"description": "NVIDIA",   "proName": "NASDAQ:NVDA"},
+                    {"description": "Meta",     "proName": "NASDAQ:META"}
+                ],
+                "showSymbolLogo": true, "isTransparent": true,
+                "displayMode": "adaptive", "colorTheme": "dark", "locale": "en"
+            }
+            </script>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/Image 11.png" alt="WealthBridge" class="nav-logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="global-markets.html">Global Markets</a>
+                <a href="unlisted.html">Private Equity</a>
+                <a href="golden-visas.html">Golden Visa</a>
+                <a href="insights.html" class="active">Insights</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="#" class="nav-cta">Login</a>
+            </div>
+            <div class="mobile-toggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <!-- Breadcrumb -->
+    <div class="wb-breadcrumb">
+        <div class="container">
+            <a href="index.html"><i class="fas fa-home"></i></a>
+            <i class="fas fa-chevron-right"></i>
+            <a href="insights.html">Insights</a>
+            <i class="fas fa-chevron-right"></i>
+            <span id="wb-post-breadcrumb">Article</span>
+        </div>
+    </div>
+
+    <!-- Post Hero -->
+    <div id="wb-post-hero" class="wb-post-hero"></div>
+
+    <!-- Skeleton loader -->
+    <div id="wb-post-skeleton" class="wb-post-skeleton container" style="display:none;">
+        <div class="wb-skel-header">
+            <div class="wb-skel-line wb-skel-line--sm"></div>
+            <div class="wb-skel-line wb-skel-line--lg"></div>
+            <div class="wb-skel-line wb-skel-line--md"></div>
+            <div class="wb-skel-meta"></div>
+        </div>
+        <div class="wb-skel-body">
+            <div class="wb-skel-line"></div>
+            <div class="wb-skel-line"></div>
+            <div class="wb-skel-line wb-skel-line--md"></div>
+            <div class="wb-skel-line"></div>
+            <div class="wb-skel-line wb-skel-line--sm"></div>
+            <div class="wb-skel-line"></div>
+            <div class="wb-skel-line wb-skel-line--md"></div>
+        </div>
+    </div>
+
+    <!-- Not Found -->
+    <div id="wb-not-found" class="wb-not-found" style="display:none;">
+        <i class="fas fa-newspaper"></i>
+        <h2>Article Not Found</h2>
+        <p>This article may have been moved or removed. Browse all our content in the Knowledge Center.</p>
+        <a href="insights.html" class="btn btn-primary" style="margin-top:20px;">
+            <i class="fas fa-arrow-left"></i> Back to Insights
+        </a>
+    </div>
+
+    <!-- Article -->
+    <article id="wb-article" class="wb-article-wrap" style="opacity:0;">
+        <div class="container wb-article-layout">
+
+            <!-- Main column -->
+            <div class="wb-article-main">
+
+                <!-- Post header -->
+                <header class="wb-post-header">
+                    <span id="wb-post-category" class="wb-ct-badge"></span>
+                    <h1 id="wb-post-title" class="wb-post-title"></h1>
+                    <div class="wb-post-meta">
+                        <span><i class="fas fa-user-circle"></i> <span id="wb-post-author"></span></span>
+                        <span><i class="fas fa-calendar-alt"></i> <span id="wb-post-date"></span></span>
+                        <span><i class="fas fa-clock"></i> <span id="wb-post-readtime"></span></span>
+                    </div>
+                </header>
+
+                <!-- Video embed (hidden by default) -->
+                <div id="wb-video-section" class="wb-video-section" style="display:none;">
+                    <div class="wb-video-wrapper">
+                        <iframe id="wb-video-iframe"
+                            width="100%" height="100%"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen
+                            loading="lazy">
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Research report download (hidden by default) -->
+                <div id="wb-report-section" class="wb-report-section" style="display:none;">
+                    <div class="wb-report-card">
+                        <div class="wb-report-icon"><i class="fas fa-file-pdf"></i></div>
+                        <div class="wb-report-info">
+                            <h4>Research Report</h4>
+                            <div class="wb-report-meta">
+                                <span id="wb-report-year"></span>
+                                <span id="wb-report-pages"></span>
+                            </div>
+                        </div>
+                        <a id="wb-report-download" href="#" target="_blank" rel="noopener" class="btn btn-primary">
+                            <i class="fas fa-download"></i> Download PDF
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Article body -->
+                <div id="wb-post-body" class="wb-post-body"></div>
+
+                <!-- Tags -->
+                <div class="wb-tags-section" style="display:none;">
+                    <div id="wb-post-tags" class="wb-tags"></div>
+                </div>
+
+                <!-- Share bar -->
+                <div class="wb-share-bar">
+                    <span class="wb-share-label">Share:</span>
+                    <a id="wb-share-twitter" href="#" target="_blank" rel="noopener" class="wb-share-btn wb-share-twitter" title="Share on X / Twitter">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a id="wb-share-linkedin" href="#" target="_blank" rel="noopener" class="wb-share-btn wb-share-linkedin" title="Share on LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a id="wb-share-whatsapp" href="#" target="_blank" rel="noopener" class="wb-share-btn wb-share-whatsapp" title="Share on WhatsApp">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a id="wb-share-copy" href="#" class="wb-share-btn wb-share-copy" title="Copy link">
+                        <i class="fas fa-link"></i>
+                    </a>
+                </div>
+
+                <!-- Author bio -->
+                <div id="wb-author-bio" class="wb-author-bio" style="display:none;"></div>
+
+                <!-- Inline CTA -->
+                <div id="wb-post-cta" class="wb-post-cta" style="display:none;">
+                    <h3 id="wb-cta-heading"></h3>
+                    <p id="wb-cta-desc"></p>
+                    <a id="wb-cta-btn" href="contact.html" class="btn btn-primary">Get Started <i class="fas fa-arrow-right"></i></a>
+                </div>
+
+            </div><!-- /wb-article-main -->
+
+            <!-- Sidebar -->
+            <aside class="wb-article-sidebar">
+
+                <!-- Quick actions -->
+                <div class="wb-sidebar-card">
+                    <h4 class="wb-sidebar-title">Get Expert Advice</h4>
+                    <p style="font-size:0.85rem; color:var(--text-muted); margin-bottom:14px;">Discuss this topic with our investment specialists.</p>
+                    <a href="contact.html" class="btn btn-primary" style="width:100%; justify-content:center; margin-bottom:10px;">
+                        Free Consultation <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <button onclick="wbWhatsApp('general')" class="btn-whatsapp" style="width:100%; justify-content:center;">
+                        <i class="fab fa-whatsapp"></i> WhatsApp Us
+                    </button>
+                </div>
+
+                <!-- Back to insights -->
+                <div class="wb-sidebar-card wb-sidebar-card--light">
+                    <a href="insights.html" class="wb-back-link">
+                        <i class="fas fa-arrow-left"></i> All Insights
+                    </a>
+                </div>
+
+            </aside>
+
+        </div><!-- /wb-article-layout -->
+    </article>
+
+    <!-- Related Articles -->
+    <section id="wb-related-section" style="padding: 60px 0; background: var(--primary-light);">
+        <div class="container">
+            <h2 class="wb-section-title" style="margin-bottom:32px;">Related Articles</h2>
+            <div id="wb-related" class="wb-related-grid"></div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container reveal">
+            <h2>Want Personalised <span class="highlight">Investment Advice?</span></h2>
+            <p>Speak with our experts to create a wealth strategy tailored to your goals.</p>
+            <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+                <a href="contact.html" class="btn btn-primary">Free Consultation <i class="fas fa-arrow-right"></i></a>
+                <button onclick="wbWhatsApp('general')" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/Image 11.png" alt="WealthBridge" style="height:46px;width:auto;margin-bottom:4px;filter:invert(1);mix-blend-mode:screen;">
+                    <p>A new age Wealth Manager creating a bridge between India and the rest of the world, making Indians true global citizens.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/wealthbridgeindia/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/WealthBridgeIN?s=09" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/wealthbridgeconsultants" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/wealth-bridge-india/posts/?feedView=all&viewAsMember=true" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="global-markets.html">Global Markets</a></li>
+                        <li><a href="unlisted.html">Private Equity</a></li>
+                        <li><a href="golden-visas.html">Golden Visas</a></li>
+                        <li><a href="insights.html">Insights</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" style="color:rgba(255,255,255,0.6);margin-right:8px;"></i> 97 Shanti Kunj, New Delhi 110070</li>
+                        <li><i class="fas fa-phone" style="color:rgba(255,255,255,0.6);margin-right:8px;"></i>
+                            <a href="tel:+919311778137" style="color:rgba(255,255,255,0.85);text-decoration:none;">+91 93117 78137</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025 WealthBridge. All rights reserved.</span>
+                <span>SEBI Registered | AMFI Certified</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/leads.js"></script>
+    <script src="js/sanity-client.js"></script>
+    <script src="js/post.js"></script>
+</body>
+</html>

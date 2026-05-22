@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights & Knowledge Center — WealthBridge</title>
+    <meta name="description" content="Expert investment insights, market updates, educational articles, videos and research reports from WealthBridge.">
+    <meta property="og:title" content="Insights — WealthBridge">
+    <meta property="og:description" content="Expert investment insights, market updates, blogs and research from WealthBridge.">
+    <meta property="og:type" content="website">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="page-loader"><div class="loader-spinner"></div></div>
+
+    <!-- Stock Ticker -->
+    <div class="ticker-ribbon">
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+                "symbols": [
+                    {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
+                    {"proName": "FOREXCOM:NSXUSD", "title": "US 100"},
+                    {"proName": "FX_IDC:EURUSD", "title": "EUR to USD"},
+                    {"description": "Apple",    "proName": "NASDAQ:AAPL"},
+                    {"description": "Tesla",    "proName": "NASDAQ:TSLA"},
+                    {"description": "Microsoft","proName": "NASDAQ:MSFT"},
+                    {"description": "Amazon",   "proName": "NASDAQ:AMZN"},
+                    {"description": "Google",   "proName": "NASDAQ:GOOGL"},
+                    {"description": "NVIDIA",   "proName": "NASDAQ:NVDA"},
+                    {"description": "Meta",     "proName": "NASDAQ:META"}
+                ],
+                "showSymbolLogo": true, "isTransparent": true,
+                "displayMode": "adaptive", "colorTheme": "dark", "locale": "en"
+            }
+            </script>
+        </div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <img src="images/Image 11.png" alt="WealthBridge" class="nav-logo-img">
+            </a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Us</a>
+                <a href="global-markets.html">Global Markets</a>
+                <a href="unlisted.html">Private Equity</a>
+                <a href="golden-visas.html">Golden Visa</a>
+                <a href="insights.html" class="active">Insights</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="#" class="nav-cta">Login</a>
+            </div>
+            <div class="mobile-toggle"><span></span><span></span><span></span></div>
+        </div>
+    </nav>
+
+    <!-- Page Hero -->
+    <section class="page-hero">
+        <div class="particles"></div>
+        <h1>Knowledge <span class="highlight">Center</span></h1>
+        <p>Expert insights, market updates, and investment education for the modern investor</p>
+    </section>
+
+    <!-- Filter Bar -->
+    <section style="padding: 32px 0 0; background: var(--primary);">
+        <div class="container">
+            <div class="wb-filter-bar" id="wb-insights-grid">
+                <button class="wb-filter-btn active" data-filter="all">
+                    All <span class="wb-filter-count" id="wb-count-all"></span>
+                </button>
+                <button class="wb-filter-btn" data-filter="blog">
+                    <i class="fas fa-pen-nib"></i> Blogs
+                    <span class="wb-filter-count" id="wb-count-blog"></span>
+                </button>
+                <button class="wb-filter-btn" data-filter="marketUpdate">
+                    <i class="fas fa-chart-line"></i> Market Updates
+                    <span class="wb-filter-count" id="wb-count-marketUpdate"></span>
+                </button>
+                <button class="wb-filter-btn" data-filter="educational">
+                    <i class="fas fa-graduation-cap"></i> Educational
+                    <span class="wb-filter-count" id="wb-count-educational"></span>
+                </button>
+                <button class="wb-filter-btn" data-filter="video">
+                    <i class="fas fa-play-circle"></i> Videos
+                    <span class="wb-filter-count" id="wb-count-video"></span>
+                </button>
+                <button class="wb-filter-btn" data-filter="research">
+                    <i class="fas fa-file-alt"></i> Research
+                    <span class="wb-filter-count" id="wb-count-research"></span>
+                </button>
+                <button class="wb-filter-btn" data-filter="infographic">
+                    <i class="fas fa-chart-pie"></i> Infographics
+                    <span class="wb-filter-count" id="wb-count-infographic"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Article -->
+    <section style="padding: 32px 0 0;">
+        <div class="container">
+            <div id="wb-featured"></div>
+        </div>
+    </section>
+
+    <!-- Content Grid -->
+    <section style="padding: 40px 0 80px;">
+        <div class="container">
+            <div class="wb-grid" id="wb-grid"></div>
+
+            <!-- Load More -->
+            <div style="text-align:center; margin-top:40px;">
+                <button id="wb-load-more" class="btn btn-outline" style="display:none; gap:10px;">
+                    <i class="fas fa-plus-circle"></i> Load More Articles
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container reveal">
+            <h2>Want Personalised <span class="highlight">Investment Advice?</span></h2>
+            <p>Speak with our experts to create a wealth strategy tailored to your goals.</p>
+            <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+                <a href="contact.html" class="btn btn-primary">Free Consultation <i class="fas fa-arrow-right"></i></a>
+                <button onclick="wbWhatsApp('general')" class="btn-whatsapp">
+                    <i class="fab fa-whatsapp"></i> WhatsApp Us
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <img src="images/Image 11.png" alt="WealthBridge" style="height:46px;width:auto;margin-bottom:4px;filter:invert(1);mix-blend-mode:screen;">
+                    <p>A new age Wealth Manager creating a bridge between India and the rest of the world, making Indians true global citizens.</p>
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/wealthbridgeindia/" target="_blank" rel="noopener"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://x.com/WealthBridgeIN?s=09" target="_blank" rel="noopener"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.instagram.com/wealthbridgeconsultants" target="_blank" rel="noopener"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/company/wealth-bridge-india/posts/?feedView=all&viewAsMember=true" target="_blank" rel="noopener"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <ul>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="about.html#team">Our Team</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="global-markets.html">Global Markets</a></li>
+                        <li><a href="unlisted.html">Private Equity</a></li>
+                        <li><a href="golden-visas.html">Golden Visas</a></li>
+                        <li><a href="insights.html">Insights</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt" style="color:rgba(255,255,255,0.6);margin-right:8px;"></i> 97 Shanti Kunj, New Delhi 110070</li>
+                        <li><i class="fas fa-phone" style="color:rgba(255,255,255,0.6);margin-right:8px;"></i>
+                            <a href="tel:+919311778137" style="color:rgba(255,255,255,0.85);text-decoration:none;">+91 93117 78137</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2025 WealthBridge. All rights reserved.</span>
+                <span>SEBI Registered | AMFI Certified</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/config.js"></script>
+    <script src="js/leads.js"></script>
+    <script src="js/sanity-client.js"></script>
+    <script src="js/insights.js"></script>
+</body>
+</html>

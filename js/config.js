@@ -51,7 +51,7 @@ var WB = {
      Google Apps Script Web App URL.
      See: google-apps-script.js for step-by-step instructions.
   ─────────────────────────────────────────────────────────── */
-  sheetsWebhookUrl: 'YOUR_APPS_SCRIPT_WEB_APP_URL_HERE',
+  sheetsWebhookUrl: 'https://script.google.com/macros/s/AKfycbxllKQMtIvQcfWSTqAxh0n7cGxJLNsdxA7NQmmfgn_Us1JVMdwUJIxgfnOTAKTHFUq-/exec',
 
   /* ── Notification Email ──────────────────────────────────────
      Leads will be emailed here via Apps Script.

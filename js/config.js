@@ -53,6 +53,17 @@ var WB = {
   ─────────────────────────────────────────────────────────── */
   sheetsWebhookUrl: 'https://script.google.com/macros/s/AKfycbxllKQMtIvQcfWSTqAxh0n7cGxJLNsdxA7NQmmfgn_Us1JVMdwUJIxgfnOTAKTHFUq-/exec',
 
+  /* ── Form Shared Secret (anti-spam) ──────────────────────────
+     This MUST match the WB_FORM_SECRET value you set in
+     Apps Script → Project Settings → Script Properties.
+     Without a match, the script rejects the submission.
+     If this is ever leaked, rotate it in both places.
+     Note: any client-side secret is visible to a determined
+     attacker. This raises the cost of spam, not stops it
+     entirely — combine with the daily cap in Apps Script.
+  ─────────────────────────────────────────────────────────── */
+  formSecret: 'REPLACE_WITH_YOUR_LONG_RANDOM_SECRET',
+
   /* ── Notification Email ──────────────────────────────────────
      Leads will be emailed here via Apps Script.
      Edit in your Apps Script dashboard (not here).

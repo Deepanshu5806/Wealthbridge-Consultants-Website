@@ -210,6 +210,24 @@
       var hp = form.querySelector('#wb-hp');
       if (hp && hp.value) return; /* bot filled the hidden field */
 
+      /* Client-side rate-limit: max 3 submissions per 10 minutes per browser.
+         Doesn't stop a determined attacker, but blocks accidental double-clicks
+         and unsophisticated bots. Apps Script enforces the real daily cap. */
+      try {
+        var nowTs   = Date.now();
+        var raw     = localStorage.getItem('wb_form_log') || '[]';
+        var history = JSON.parse(raw).filter(function (t) { return nowTs - t < 600000; });
+        if (history.length >= 3) {
+          if (errorBox) {
+            errorBox.textContent = 'Too many submissions. Please try again in a few minutes.';
+            errorBox.style.display = 'flex';
+          }
+          return;
+        }
+        history.push(nowTs);
+        localStorage.setItem('wb_form_log', JSON.stringify(history));
+      } catch (_) { /* localStorage unavailable — ignore */ }
+
       /* Collect */
       var data = {
         firstName: trim(getValue('wb-first-name')),
@@ -219,7 +237,8 @@
         interest:  getValue('wb-interest'),
         message:   trim(getValue('wb-message')),
         source:    (window.location.pathname.split('/').pop() || 'index.html'),
-        timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }) + ' IST'
+        timestamp: new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }) + ' IST',
+        _secret:   (typeof WB !== 'undefined' && WB.formSecret) ? WB.formSecret : ''
       };
 
       /* Validate */

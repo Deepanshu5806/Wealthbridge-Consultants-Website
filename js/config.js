@@ -62,7 +62,7 @@ var WB = {
      attacker. This raises the cost of spam, not stops it
      entirely — combine with the daily cap in Apps Script.
   ─────────────────────────────────────────────────────────── */
-  formSecret: 'REPLACE_WITH_YOUR_LONG_RANDOM_SECRET',
+  formSecret: '713c8af0-c5e4-4cfe-9f18-539c04b64504992b00b5-c0e5-4b18-aa37-94d786050a43',
 
   /* ── Notification Email ──────────────────────────────────────
      Leads will be emailed here via Apps Script.

@@ -72,9 +72,8 @@ ul { list-style: none; }
 .ticker-ribbon {
     background: #0f2b4a;
     width: 100%;
-    height: 44px;
-    display: flex;
-    align-items: center;
+    height: 46px;
+    display: block;
     position: fixed;
     top: 0;
     left: 0;
@@ -85,20 +84,21 @@ ul { list-style: none; }
 
 .ticker-ribbon .tradingview-widget-container {
     width: 100%;
-    height: 44px;
+    height: 46px;
 }
 
 .ticker-ribbon iframe {
     width: 100%;
-    height: 44px;
+    height: 56px;          /* extra height to push TradingView branding out of view */
     border: none;
     display: block;
+    margin-top: -4px;       /* vertically center the ticker content */
 }
 
 /* ===== NAVBAR ===== */
 .navbar {
     position: fixed;
-    top: 44px;
+    top: 46px;
     left: 0;
     width: 100%;
     z-index: 1000;
@@ -826,9 +826,9 @@ section {
                Golden Visa, Insights (homepage untouched)
    ═══════════════════════════════════════════════════════════ */
 .page-hero {
-    /* Top padding clears fixed ticker(44px) + navbar(80px) = 124px.
-       Zero bottom padding lets flexbox center content in visible area */
-    padding: 130px 20px 28px;
+    /* Top padding clears fixed ticker(46px) + navbar(80px) = 126px.
+       Bottom padding balances content in visible area */
+    padding: 132px 20px 28px;
     min-height: 0;
 
     /* Layout */
@@ -1972,7 +1972,7 @@ section {
     .nav-links {
         display: none;
         position: fixed;
-        top: 104px; /* ticker(44) + navbar(60) */
+        top: 106px; /* ticker(46) + navbar(60) */
         left: 0;
         right: 0;
         width: 100%;
@@ -2013,7 +2013,7 @@ section {
 
     /* --- Hero --- */
     .hero {
-        padding-top: 120px; /* ticker(44) + navbar(60) + 16 */
+        padding-top: 122px; /* ticker(46) + navbar(60) + 16 */
         min-height: auto;
         padding-bottom: 60px;
     }
@@ -2214,7 +2214,7 @@ section {
 
     /* --- Page Hero --- */
     .page-hero {
-        padding: 100px 16px 22px;
+        padding: 108px 16px 22px;
         min-height: 0;
     }
     .page-hero p {
@@ -2327,7 +2327,7 @@ section {
         font-size: clamp(1.4rem, 7vw, 1.8rem);
     }
     .nav-links {
-        top: 102px; /* ticker(44) + navbar(58 approx) */
+        top: 104px; /* ticker(46) + navbar(58 approx) */
     }
 }
 

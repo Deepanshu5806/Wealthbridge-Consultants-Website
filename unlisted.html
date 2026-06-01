@@ -14,10 +14,30 @@
 
     <!-- Stock Ticker -->
     <div class="ticker-ribbon">
-        <iframe src="https://www.tradingview-widget.com/embed-widget/ticker-tape/?locale=en#%7B%22symbols%22%3A%5B%7B%22proName%22%3A%22FOREXCOM%3ASPXUSD%22%2C%22title%22%3A%22S%26P%20500%22%7D%2C%7B%22proName%22%3A%22FOREXCOM%3ANSXUSD%22%2C%22title%22%3A%22US%20100%22%7D%2C%7B%22proName%22%3A%22FX_IDC%3AEURUSD%22%2C%22title%22%3A%22EUR%20to%20USD%22%7D%2C%7B%22description%22%3A%22Apple%22%2C%22proName%22%3A%22NASDAQ%3AAAPL%22%7D%2C%7B%22description%22%3A%22Tesla%22%2C%22proName%22%3A%22NASDAQ%3ATSLA%22%7D%2C%7B%22description%22%3A%22Microsoft%22%2C%22proName%22%3A%22NASDAQ%3AMSFT%22%7D%2C%7B%22description%22%3A%22Amazon%22%2C%22proName%22%3A%22NASDAQ%3AAMZN%22%7D%2C%7B%22description%22%3A%22Google%22%2C%22proName%22%3A%22NASDAQ%3AGOOGL%22%7D%2C%7B%22description%22%3A%22NVIDIA%22%2C%22proName%22%3A%22NASDAQ%3ANVDA%22%7D%2C%7B%22description%22%3A%22Meta%22%2C%22proName%22%3A%22NASDAQ%3AMETA%22%7D%5D%2C%22showSymbolLogo%22%3Atrue%2C%22isTransparent%22%3Atrue%2C%22displayMode%22%3A%22adaptive%22%2C%22colorTheme%22%3A%22dark%22%2C%22locale%22%3A%22en%22%7D"
-            style="width:100%;height:44px;border:none;display:block;"
-            loading="eager"
-            title="Stock ticker"></iframe>
+        <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+            {
+                "symbols": [
+                    {"proName": "FOREXCOM:SPXUSD", "title": "S&P 500"},
+                    {"proName": "FOREXCOM:NSXUSD", "title": "US 100"},
+                    {"proName": "FX_IDC:EURUSD", "title": "EUR to USD"},
+                    {"description": "Apple", "proName": "NASDAQ:AAPL"},
+                    {"description": "Tesla", "proName": "NASDAQ:TSLA"},
+                    {"description": "Microsoft", "proName": "NASDAQ:MSFT"},
+                    {"description": "Amazon", "proName": "NASDAQ:AMZN"},
+                    {"description": "Google", "proName": "NASDAQ:GOOGL"},
+                    {"description": "NVIDIA", "proName": "NASDAQ:NVDA"},
+                    {"description": "Meta", "proName": "NASDAQ:META"}
+                ],
+                "showSymbolLogo": true,
+                "isTransparent": true,
+                "displayMode": "adaptive",
+                "colorTheme": "dark",
+                "locale": "en"
+            }
+            </script>
+        </div>
     </div>
 
     <!-- Navbar -->

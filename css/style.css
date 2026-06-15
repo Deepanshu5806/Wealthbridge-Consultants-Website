@@ -993,6 +993,12 @@ section {
     gap: 32px;
 }
 
+.advisory-grid {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
 .team-card {
     background: var(--bg-card);
     border: 1px solid var(--border);
@@ -1927,6 +1933,7 @@ section {
     .services-grid { grid-template-columns: repeat(2, 1fr); }
     .unlisted-grid { grid-template-columns: repeat(2, 1fr); }
     .team-grid { grid-template-columns: repeat(2, 1fr); }
+    .advisory-grid { grid-template-columns: repeat(2, 1fr); }
     .footer-grid { grid-template-columns: repeat(2, 1fr); }
     .markets-grid { grid-template-columns: 1fr; }
     .pcg-grid { grid-template-columns: 1fr; }
@@ -2149,7 +2156,8 @@ section {
     }
 
     /* --- Team --- */
-    .team-grid {
+    .team-grid,
+    .advisory-grid {
         grid-template-columns: 1fr;
         gap: 24px;
     }

@@ -160,55 +160,58 @@
                     <a href="global-markets.html" class="btn btn-primary" style="margin-top: 32px;">Explore Markets <i class="fas fa-arrow-right"></i></a>
                 </div>
                 <div class="markets-visual reveal reveal-delay-2">
-                    <!-- Live Stock Price List -->
+                    <!-- Live Stock Price Table -->
                     <div class="stock-list-container">
                         <div class="stock-list-header">
                             <span>Stock</span>
                             <span>Price (USD)</span>
-                            <span style="display:flex;align-items:center;gap:6px;">1D Change <span id="live-dot" style="width:7px;height:7px;border-radius:50%;background:#22c55e;display:inline-block;animation:livePulse 1.5s ease-in-out infinite;"></span></span>
+                            <span style="text-align:right;">1D Change</span>
                         </div>
                         <div class="stock-list-item" data-symbol="AAPL">
-                            <span class="stock-name"><i class="fab fa-apple" style="margin-right:8px;"></i>Apple (AAPL)</span>
-                            <span class="stock-price" id="price-AAPL">$198.11</span>
-                            <span class="stock-change positive" id="change-AAPL">+1.24%</span>
+                            <span class="stock-name"><span class="stock-icon"><i class="fab fa-apple"></i></span>Apple (AAPL)</span>
+                            <span class="stock-price" id="price-AAPL">—</span>
+                            <span class="stock-change" id="change-AAPL"><span>—</span></span>
                         </div>
                         <div class="stock-list-item" data-symbol="MSFT">
-                            <span class="stock-name"><i class="fab fa-microsoft" style="margin-right:8px;"></i>Microsoft (MSFT)</span>
-                            <span class="stock-price" id="price-MSFT">$454.27</span>
-                            <span class="stock-change positive" id="change-MSFT">+0.87%</span>
+                            <span class="stock-name"><span class="stock-icon"><i class="fab fa-microsoft"></i></span>Microsoft (MSFT)</span>
+                            <span class="stock-price" id="price-MSFT">—</span>
+                            <span class="stock-change" id="change-MSFT"><span>—</span></span>
                         </div>
                         <div class="stock-list-item" data-symbol="GOOGL">
-                            <span class="stock-name"><i class="fab fa-google" style="margin-right:8px;"></i>Google (GOOGL)</span>
-                            <span class="stock-price" id="price-GOOGL">$175.98</span>
-                            <span class="stock-change negative" id="change-GOOGL">-0.32%</span>
+                            <span class="stock-name"><span class="stock-icon"><i class="fab fa-google"></i></span>Google (GOOGL)</span>
+                            <span class="stock-price" id="price-GOOGL">—</span>
+                            <span class="stock-change" id="change-GOOGL"><span>—</span></span>
                         </div>
                         <div class="stock-list-item" data-symbol="AMZN">
-                            <span class="stock-name"><i class="fab fa-amazon" style="margin-right:8px;"></i>Amazon (AMZN)</span>
-                            <span class="stock-price" id="price-AMZN">$203.65</span>
-                            <span class="stock-change positive" id="change-AMZN">+1.56%</span>
+                            <span class="stock-name"><span class="stock-icon"><i class="fab fa-amazon"></i></span>Amazon (AMZN)</span>
+                            <span class="stock-price" id="price-AMZN">—</span>
+                            <span class="stock-change" id="change-AMZN"><span>—</span></span>
                         </div>
                         <div class="stock-list-item" data-symbol="TSLA">
-                            <span class="stock-name"><i class="fas fa-car" style="margin-right:8px;"></i>Tesla (TSLA)</span>
-                            <span class="stock-price" id="price-TSLA">$341.83</span>
-                            <span class="stock-change positive" id="change-TSLA">+2.34%</span>
+                            <span class="stock-name"><span class="stock-icon"><i class="fas fa-bolt"></i></span>Tesla (TSLA)</span>
+                            <span class="stock-price" id="price-TSLA">—</span>
+                            <span class="stock-change" id="change-TSLA"><span>—</span></span>
                         </div>
                         <div class="stock-list-item" data-symbol="NVDA">
-                            <span class="stock-name"><i class="fas fa-microchip" style="margin-right:8px;"></i>NVIDIA (NVDA)</span>
-                            <span class="stock-price" id="price-NVDA">$131.29</span>
-                            <span class="stock-change positive" id="change-NVDA">+3.12%</span>
+                            <span class="stock-name"><span class="stock-icon"><i class="fas fa-microchip"></i></span>NVIDIA (NVDA)</span>
+                            <span class="stock-price" id="price-NVDA">—</span>
+                            <span class="stock-change" id="change-NVDA"><span>—</span></span>
                         </div>
                         <div class="stock-list-item" data-symbol="META">
-                            <span class="stock-name"><i class="fab fa-meta" style="margin-right:8px;"></i>Meta (META)</span>
-                            <span class="stock-price" id="price-META">$622.31</span>
-                            <span class="stock-change negative" id="change-META">-0.54%</span>
+                            <span class="stock-name"><span class="stock-icon"><i class="fab fa-meta"></i></span>Meta (META)</span>
+                            <span class="stock-price" id="price-META">—</span>
+                            <span class="stock-change" id="change-META"><span>—</span></span>
                         </div>
                         <div class="stock-list-item" data-symbol="NFLX">
-                            <span class="stock-name"><i class="fas fa-film" style="margin-right:8px;"></i>Netflix (NFLX)</span>
-                            <span class="stock-price" id="price-NFLX">$1,098.72</span>
-                            <span class="stock-change positive" id="change-NFLX">+0.91%</span>
+                            <span class="stock-name"><span class="stock-icon"><i class="fas fa-film"></i></span>Netflix (NFLX)</span>
+                            <span class="stock-price" id="price-NFLX">—</span>
+                            <span class="stock-change" id="change-NFLX"><span>—</span></span>
+                        </div>
+                        <div class="stock-list-footer">
+                            <span id="live-dot" style="width:6px;height:6px;border-radius:50%;background:#d4af37;display:inline-block;animation:livePulse 1.8s ease-in-out infinite;flex-shrink:0;"></span>
+                            <span id="stock-last-updated">Fetching live prices…</span>
                         </div>
                     </div>
-                    <p style="text-align:center; font-size:0.72rem; color:var(--text-muted); margin-top:8px;" id="stock-last-updated">Fetching live prices…</p>
                 </div>
             </div>
         </div>
@@ -362,279 +365,60 @@
     </footer>
 
     <script src="js/main.js"></script>
+
     <script>
-    (function() {
-        const symbols = ['AAPL','MSFT','GOOGL','AMZN','TSLA','NVDA','META','NFLX'];
+    (function () {
+        var symbols = ['AAPL','MSFT','GOOGL','AMZN','TSLA','NVDA','META','NFLX'];
+        var yfBase  = 'https://query2.finance.yahoo.com/v7/finance/quote?symbols=' + symbols.join(',') + '&fields=regularMarketPrice,regularMarketChangePercent';
+        var proxies = [
+            'https://api.allorigins.win/raw?url=' + encodeURIComponent(yfBase),
+            'https://corsproxy.io/?' + encodeURIComponent(yfBase),
+            'https://proxy.cors.sh/' + yfBase
+        ];
 
-        function updateStock(symbol, price, changePercent) {
-            const priceEl = document.getElementById('price-' + symbol);
-            const changeEl = document.getElementById('change-' + symbol);
+        function updateStock(symbol, price, changePct) {
+            var priceEl  = document.getElementById('price-'  + symbol);
+            var changeEl = document.getElementById('change-' + symbol);
             if (!priceEl || !changeEl) return;
-
-            const formattedPrice = '$' + price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
-            const sign = changePercent >= 0 ? '+' : '';
-            const formattedChange = sign + changePercent.toFixed(2) + '%';
-
-            priceEl.textContent = formattedPrice;
-            changeEl.textContent = formattedChange;
-            changeEl.className = 'stock-change ' + (changePercent >= 0 ? 'positive' : 'negative');
+            priceEl.textContent = '$' + price.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+            var sign = changePct >= 0 ? '+' : '';
+            changeEl.innerHTML = '<span>' + sign + changePct.toFixed(2) + '%</span>';
+            changeEl.className = 'stock-change ' + (changePct >= 0 ? 'positive' : 'negative');
         }
 
-        function fetchPrices() {
-            const url = 'https://query1.finance.yahoo.com/v7/finance/quote?symbols=' + symbols.join(',') + '&fields=regularMarketPrice,regularMarketChangePercent';
-            fetch(url, { headers: { 'Accept': 'application/json' } })
-                .then(r => r.json())
-                .then(data => {
-                    const quotes = data.quoteResponse && data.quoteResponse.result;
-                    if (!quotes) return;
-                    quotes.forEach(q => {
-                        updateStock(q.symbol, q.regularMarketPrice, q.regularMarketChangePercent);
-                    });
-                    const now = new Date();
-                    const timeStr = now.toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-                    const el = document.getElementById('stock-last-updated');
-                    if (el) el.textContent = 'Live data · Updated ' + timeStr + ' · Prices indicative only';
+        function handleData(data) {
+            var quotes = data && data.quoteResponse && data.quoteResponse.result;
+            if (!quotes || !quotes.length) return false;
+            quotes.forEach(function(q) {
+                updateStock(q.symbol, q.regularMarketPrice, q.regularMarketChangePercent);
+            });
+            var t = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
+            var el = document.getElementById('stock-last-updated');
+            if (el) el.textContent = 'Live · Updated ' + t + ' · Indicative only';
+            return true;
+        }
+
+        function tryProxy(index) {
+            if (index >= proxies.length) {
+                var el = document.getElementById('stock-last-updated');
+                if (el) el.textContent = 'Markets may be closed · Prices indicative only';
+                return;
+            }
+            fetch(proxies[index])
+                .then(function(r) { return r.json(); })
+                .then(function(data) {
+                    if (!handleData(data)) tryProxy(index + 1);
                 })
-                .catch(() => {
-                    const el = document.getElementById('stock-last-updated');
-                    if (el) el.textContent = 'Prices are indicative only. Markets may be closed.';
-                });
+                .catch(function() { tryProxy(index + 1); });
         }
+
+        function fetchPrices() { tryProxy(0); }
 
         fetchPrices();
         setInterval(fetchPrices, 60000);
-
-        // Make stock rows clickable
-        document.querySelectorAll('.stock-list-item').forEach(function(row) {
-            row.style.cursor = 'pointer';
-            row.style.transition = 'background 0.2s';
-            // Add a subtle info hint
-            var hint = document.createElement('span');
-            hint.innerHTML = '<i class="fas fa-info-circle" style="color:#0f2b4a;opacity:0.4;font-size:0.75rem;margin-left:4px;" title="Click for fundamentals"></i>';
-            row.querySelector('.stock-name').appendChild(hint);
-
-            row.addEventListener('mouseenter', function() { this.style.background = 'rgba(15,43,74,0.06)'; });
-            row.addEventListener('mouseleave', function() { this.style.background = ''; });
-            row.addEventListener('click', function() {
-                var symbol = this.getAttribute('data-symbol');
-                openStockModal(symbol);
-            });
-        });
     })();
     </script>
 
-    <!-- Stock Fundamentals Modal -->
-    <div id="stock-modal" style="display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:rgba(0,0,0,0.6); z-index:9999; align-items:center; justify-content:center; padding:20px;">
-        <div style="background:#fff; border-radius:20px; max-width:680px; width:100%; max-height:88vh; overflow-y:auto; box-shadow:0 20px 80px rgba(0,0,0,0.3); position:relative;">
-            <!-- Modal Header -->
-            <div id="modal-header" style="padding:28px 32px 20px; border-bottom:1px solid #eef0f4; display:flex; align-items:center; justify-content:space-between; position:sticky; top:0; background:#fff; border-radius:20px 20px 0 0; z-index:1;">
-                <div style="display:flex; align-items:center; gap:16px;">
-                    <div id="modal-icon" style="width:52px; height:52px; border-radius:14px; background:#0f2b4a; display:flex; align-items:center; justify-content:center; font-size:1.5rem; color:#fff;"></div>
-                    <div>
-                        <h2 id="modal-name" style="font-size:1.4rem; font-weight:700; color:#0f2b4a; margin:0;"></h2>
-                        <p id="modal-sector" style="font-size:0.82rem; color:#6b7a8d; margin:0;"></p>
-                    </div>
-                </div>
-                <button onclick="closeStockModal()" style="background:none; border:none; font-size:1.5rem; cursor:pointer; color:#6b7a8d; padding:8px; border-radius:8px; line-height:1;">&times;</button>
-            </div>
-
-            <!-- Modal Body -->
-            <div style="padding:24px 32px 32px;">
-                <!-- Business Model -->
-                <div style="background:#f8f9fc; border-radius:12px; padding:20px; margin-bottom:20px; border-left:4px solid #0f2b4a;">
-                    <h4 style="font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#0f2b4a; margin:0 0 8px 0;">Business Model</h4>
-                    <p id="modal-business" style="font-size:0.92rem; color:#4a5568; margin:0; line-height:1.7;"></p>
-                </div>
-
-                <!-- How It Earns -->
-                <div style="background:#f0f7ff; border-radius:12px; padding:20px; margin-bottom:20px; border-left:4px solid #3b82f6;">
-                    <h4 style="font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#3b82f6; margin:0 0 8px 0;">How It Earns</h4>
-                    <p id="modal-earnings" style="font-size:0.92rem; color:#4a5568; margin:0; line-height:1.7;"></p>
-                </div>
-
-                <!-- Key Metrics Grid -->
-                <h4 style="font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#0f2b4a; margin:0 0 14px 0;">Key Financial Metrics</h4>
-                <div id="modal-metrics" style="display:grid; grid-template-columns:repeat(3, 1fr); gap:12px; margin-bottom:20px;"></div>
-
-                <!-- What Makes It Different -->
-                <div style="background:#fff8f0; border-radius:12px; padding:20px; border-left:4px solid #f97316;">
-                    <h4 style="font-size:0.78rem; font-weight:700; text-transform:uppercase; letter-spacing:1px; color:#f97316; margin:0 0 8px 0;">What Makes It Different</h4>
-                    <p id="modal-edge" style="font-size:0.92rem; color:#4a5568; margin:0; line-height:1.7;"></p>
-                </div>
-
-                <p style="font-size:0.72rem; color:#9aa3b0; margin-top:20px; text-align:center;">Data is indicative only. Not investment advice. Please do your own research before investing.</p>
-            </div>
-        </div>
-    </div>
-
-    <script>
-    var stockData = {
-        AAPL: {
-            name: 'Apple Inc.', sector: 'Technology · NASDAQ', icon: '',
-            business: 'Apple designs, manufactures and sells consumer electronics (iPhone, Mac, iPad, Apple Watch), proprietary software (iOS, macOS), and a growing ecosystem of services including the App Store, iCloud, Apple Music, and Apple TV+.',
-            earnings: 'iPhone contributes ~52% of revenue. High-margin Services segment (App Store, subscriptions) contributes ~25% and is the fastest growing. Mac, iPad, and Wearables make up the rest. Services carry ~75% gross margins vs ~37% for hardware.',
-            metrics: [
-                { label: 'Market Cap', value: '~$3.0T' },
-                { label: 'P/E Ratio', value: '~32x' },
-                { label: 'Revenue (TTM)', value: '~$385B' },
-                { label: 'Net Income', value: '~$101B' },
-                { label: 'EPS', value: '~$6.57' },
-                { label: 'Dividend Yield', value: '~0.5%' }
-            ],
-            edge: 'Unmatched ecosystem lock-in across hardware + software + services. The iPhone is the world\'s most profitable consumer product. 2B+ active devices globally create a massive recurring revenue base.'
-        },
-        MSFT: {
-            name: 'Microsoft Corp.', sector: 'Technology · NASDAQ', icon: '',
-            business: 'Microsoft builds and sells software, cloud services, and hardware. Core products include Windows, Office 365, Azure cloud, LinkedIn, GitHub, Xbox, and AI Copilot integrations across its entire product suite.',
-            earnings: 'Azure & Cloud Services contribute ~43% of revenue and are growing at 20%+ annually. Productivity (Office 365, Teams, LinkedIn) adds ~27%. Personal Computing (Windows, Xbox, Surface) contributes ~30%. Cloud margins continuously improve.',
-            metrics: [
-                { label: 'Market Cap', value: '~$3.4T' },
-                { label: 'P/E Ratio', value: '~36x' },
-                { label: 'Revenue (TTM)', value: '~$236B' },
-                { label: 'Net Income', value: '~$88B' },
-                { label: 'EPS', value: '~$11.45' },
-                { label: 'Dividend Yield', value: '~0.7%' }
-            ],
-            edge: 'Dominant in enterprise software with unbeatable distribution — Office and Azure are deeply embedded in global corporates. Its $13B OpenAI partnership gives Microsoft the strongest AI position in enterprise computing.'
-        },
-        GOOGL: {
-            name: 'Alphabet Inc.', sector: 'Technology · NASDAQ', icon: '',
-            business: 'Alphabet operates Google Search, YouTube, Google Maps, Android OS, Chrome, Google Cloud, and Waymo (self-driving). It also runs Google\'s AI research division (DeepMind) and multiple moonshot projects via Other Bets.',
-            earnings: 'Google Search & YouTube advertising generate ~75% of total revenue. Google Cloud contributes ~12% and is growing at 28%+ annually. Hardware and other revenues make up the remainder. Advertising remains highly profitable at ~40% margins.',
-            metrics: [
-                { label: 'Market Cap', value: '~$2.1T' },
-                { label: 'P/E Ratio', value: '~23x' },
-                { label: 'Revenue (TTM)', value: '~$339B' },
-                { label: 'Net Income', value: '~$94B' },
-                { label: 'EPS', value: '~$7.52' },
-                { label: 'Dividend Yield', value: '~0.5%' }
-            ],
-            edge: 'Google processes 8.5 billion searches per day — an insurmountable data moat. YouTube is the world\'s second largest search engine. Gemini AI and TPU chips position it as a long-term AI infrastructure leader.'
-        },
-        AMZN: {
-            name: 'Amazon.com Inc.', sector: 'E-commerce & Cloud · NASDAQ', icon: '',
-            business: 'Amazon operates the world\'s largest e-commerce marketplace, AWS (cloud computing), Amazon Prime, digital advertising, Alexa AI, Whole Foods, and a rapidly growing logistics and healthcare division.',
-            earnings: 'AWS contributes only ~16% of revenue but generates ~60% of total operating profit due to extremely high margins (~37%). E-commerce (retail + third-party sellers) drives bulk revenue but at thin margins. Advertising (~$50B) is the fastest-growing high-margin segment.',
-            metrics: [
-                { label: 'Market Cap', value: '~$2.2T' },
-                { label: 'P/E Ratio', value: '~40x' },
-                { label: 'Revenue (TTM)', value: '~$620B' },
-                { label: 'Net Income', value: '~$59B' },
-                { label: 'EPS', value: '~$5.53' },
-                { label: 'Dividend Yield', value: 'None' }
-            ],
-            edge: 'AWS is the world\'s #1 cloud provider with 31% market share. Prime\'s 200M+ subscribers create unmatched customer loyalty. Amazon\'s logistics network rivals UPS and FedEx, giving it structural cost advantages in delivery.'
-        },
-        TSLA: {
-            name: 'Tesla Inc.', sector: 'Electric Vehicles · NASDAQ', icon: '',
-            business: 'Tesla designs and manufactures electric vehicles (Model 3, Y, S, X, Cybertruck), battery energy storage (Powerwall, Megapack), solar panels, and is developing Full Self-Driving (FSD) software and the Optimus humanoid robot.',
-            earnings: 'Automotive sales contribute ~85% of revenue. Services & other (charging, insurance, FSD licensing) add ~8%. Energy storage is ~7% but growing rapidly. FSD software, once mature, has the potential to be an extremely high-margin recurring revenue stream.',
-            metrics: [
-                { label: 'Market Cap', value: '~$1.1T' },
-                { label: 'P/E Ratio', value: '~98x' },
-                { label: 'Revenue (TTM)', value: '~$97B' },
-                { label: 'Net Income', value: '~$7B' },
-                { label: 'EPS', value: '~$2.04' },
-                { label: 'Dividend Yield', value: 'None' }
-            ],
-            edge: 'Only automaker that develops its own AI chips, autonomous driving software, and battery tech in-house. Supercharger network (60,000+ stations) is the world\'s largest EV charging infrastructure and a growing competitive moat.'
-        },
-        NVDA: {
-            name: 'NVIDIA Corp.', sector: 'Semiconductors · NASDAQ', icon: '',
-            business: 'NVIDIA designs GPUs and AI accelerator chips used in data centers, gaming, autonomous vehicles, robotics, and scientific computing. Its CUDA software platform and AI training chips (H100, Blackwell) have become the standard for modern AI development.',
-            earnings: 'Data Center segment (AI chips for training and inference) contributes ~88% of revenue and is growing at 120%+ annually. Gaming GPUs add ~9%. Automotive and professional visualization make up the rest. Gross margins exceed 75%.',
-            metrics: [
-                { label: 'Market Cap', value: '~$3.2T' },
-                { label: 'P/E Ratio', value: '~50x' },
-                { label: 'Revenue (TTM)', value: '~$130B' },
-                { label: 'Net Income', value: '~$73B' },
-                { label: 'EPS', value: '~$2.99' },
-                { label: 'Dividend Yield', value: '~0.03%' }
-            ],
-            edge: 'NVIDIA\'s CUDA ecosystem has 4M+ developers locked in — switching to a competitor requires rewriting all AI training code. H100 and Blackwell chips are 2-3 years ahead of competitors. Every major AI model (ChatGPT, Gemini, Grok) is trained on NVIDIA hardware.'
-        },
-        META: {
-            name: 'Meta Platforms Inc.', sector: 'Social Media · NASDAQ', icon: '',
-            business: 'Meta owns Facebook (3.07B users), Instagram (2B users), WhatsApp (2B users), and Threads. It also operates Reality Labs — developing the Quest VR headset, Ray-Ban smart glasses, and the long-term metaverse vision.',
-            earnings: '~98% of revenue comes from digital advertising across Facebook and Instagram. Meta\'s AI-powered ad targeting is among the most efficient in the world. Reality Labs loses ~$5B/year but is a long-term strategic bet on spatial computing.',
-            metrics: [
-                { label: 'Market Cap', value: '~$1.6T' },
-                { label: 'P/E Ratio', value: '~26x' },
-                { label: 'Revenue (TTM)', value: '~$165B' },
-                { label: 'Net Income', value: '~$62B' },
-                { label: 'EPS', value: '~$24.57' },
-                { label: 'Dividend Yield', value: '~0.3%' }
-            ],
-            edge: '3.27B daily active people across its family of apps — the largest social media reach on Earth. Instagram Reels competes directly with TikTok and is gaining market share. AI investments in Llama models are reducing ad costs and improving targeting ROI.'
-        },
-        NFLX: {
-            name: 'Netflix Inc.', sector: 'Streaming Entertainment · NASDAQ', icon: '',
-            business: 'Netflix is the world\'s leading subscription streaming service with 270M+ paid subscribers in 190+ countries. It produces original films, series, documentaries (Stranger Things, Squid Game, Wednesday) and licenses third-party content across all genres.',
-            earnings: 'Almost entirely from monthly subscription fees ranging from $7 (ad-supported) to $23 (premium). The newer ad-supported tier is growing rapidly and adds a second revenue stream. Netflix spends ~$17B/year on content, which is amortized as an asset.',
-            metrics: [
-                { label: 'Market Cap', value: '~$475B' },
-                { label: 'P/E Ratio', value: '~50x' },
-                { label: 'Revenue (TTM)', value: '~$39B' },
-                { label: 'Net Income', value: '~$9B' },
-                { label: 'EPS', value: '~$19.83' },
-                { label: 'Dividend Yield', value: 'None' }
-            ],
-            edge: 'Netflix content is watched for 100M+ hours daily. Its global scale means a single hit show amortizes cost across 190 countries — a structural advantage no regional broadcaster can match. Password-sharing crackdown added 40M+ new subscribers in 2024.'
-        }
-    };
-
-    function openStockModal(symbol) {
-        var d = stockData[symbol];
-        if (!d) return;
-        document.getElementById('modal-name').textContent = d.name;
-        document.getElementById('modal-sector').textContent = d.sector;
-        document.getElementById('modal-icon').innerHTML = d.icon;
-        document.getElementById('modal-business').textContent = d.business;
-        document.getElementById('modal-earnings').textContent = d.earnings;
-        document.getElementById('modal-edge').textContent = d.edge;
-
-        var metricsHtml = d.metrics.map(function(m) {
-            return '<div style="background:#f8f9fc; border-radius:10px; padding:14px; text-align:center;">' +
-                '<div style="font-size:0.72rem; font-weight:700; text-transform:uppercase; letter-spacing:0.8px; color:#6b7a8d; margin-bottom:6px;">' + m.label + '</div>' +
-                '<div style="font-size:1.05rem; font-weight:700; color:#0f2b4a;">' + m.value + '</div>' +
-                '</div>';
-        }).join('');
-        document.getElementById('modal-metrics').innerHTML = metricsHtml;
-
-        // Set icon based on symbol
-        var icons = { AAPL: '', MSFT: '', GOOGL: '', AMZN: '', TSLA: '⚡', NVDA: '🤖', META: '', NFLX: '🎬' };
-        var faIcons = {
-            AAPL: '<i class="fab fa-apple"></i>',
-            MSFT: '<i class="fab fa-microsoft"></i>',
-            GOOGL: '<i class="fab fa-google"></i>',
-            AMZN: '<i class="fab fa-amazon"></i>',
-            TSLA: '<i class="fas fa-car"></i>',
-            NVDA: '<i class="fas fa-microchip"></i>',
-            META: '<i class="fab fa-meta"></i>',
-            NFLX: '<i class="fas fa-film"></i>'
-        };
-        document.getElementById('modal-icon').innerHTML = faIcons[symbol] || symbol;
-
-        var modal = document.getElementById('stock-modal');
-        modal.style.display = 'flex';
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeStockModal() {
-        document.getElementById('stock-modal').style.display = 'none';
-        document.body.style.overflow = '';
-    }
-
-    // Close on backdrop click
-    document.getElementById('stock-modal').addEventListener('click', function(e) {
-        if (e.target === this) closeStockModal();
-    });
-
-    // Close on Escape key
-    document.addEventListener('keydown', function(e) {
-        if (e.key === 'Escape') closeStockModal();
-    });
-    </script>
     <!-- Video Modal -->
     <div id="video-modal" class="video-modal-overlay" onclick="if(event.target===this)closeVideoModal();">
         <div class="video-modal-box">

@@ -403,7 +403,7 @@
             renderStock(sym, fallback[sym].price, fallback[sym].change, false);
         });
         var statusEl = document.getElementById('stock-last-updated');
-        if (statusEl) statusEl.textContent = 'Last close · Updating…';
+        if (statusEl) statusEl.textContent = 'Last close: Jun 19, 2025 · Updating…';
 
         function handleData(data) {
             var quotes = data && data.quoteResponse && data.quoteResponse.result;
@@ -418,7 +418,7 @@
 
         function tryProxy(index) {
             if (index >= proxies.length) {
-                if (statusEl) statusEl.textContent = 'Last close · Live update unavailable';
+                if (statusEl) statusEl.textContent = 'Last close: Jun 19, 2025 · Live update unavailable';
                 return;
             }
             fetch(proxies[index])

@@ -368,15 +368,27 @@
 
     <script>
     (function () {
-        var symbols = ['AAPL','MSFT','GOOGL','AMZN','TSLA','NVDA','META','NFLX'];
+        // Last known closing prices — shown immediately so table is never blank.
+        // Automatically replaced with live data when the fetch succeeds.
+        var fallback = {
+            AAPL:  { price: 298.01, change:  0.70 },
+            MSFT:  { price: 379.40, change:  0.13 },
+            GOOGL: { price: 368.03, change:  1.17 },
+            AMZN:  { price: 244.39, change:  2.90 },
+            TSLA:  { price: 400.49, change:  1.04 },
+            NVDA:  { price: 210.69, change:  2.95 },
+            META:  { price: 577.22, change:  1.70 },
+            NFLX:  { price:  77.38, change:  0.55 }
+        };
+
+        var symbols = Object.keys(fallback);
         var yfBase  = 'https://query2.finance.yahoo.com/v7/finance/quote?symbols=' + symbols.join(',') + '&fields=regularMarketPrice,regularMarketChangePercent';
         var proxies = [
             'https://api.allorigins.win/raw?url=' + encodeURIComponent(yfBase),
-            'https://corsproxy.io/?' + encodeURIComponent(yfBase),
-            'https://proxy.cors.sh/' + yfBase
+            'https://corsproxy.io/?' + encodeURIComponent(yfBase)
         ];
 
-        function updateStock(symbol, price, changePct) {
+        function renderStock(symbol, price, changePct, isLive) {
             var priceEl  = document.getElementById('price-'  + symbol);
             var changeEl = document.getElementById('change-' + symbol);
             if (!priceEl || !changeEl) return;
@@ -386,36 +398,37 @@
             changeEl.className = 'stock-change ' + (changePct >= 0 ? 'positive' : 'negative');
         }
 
+        // Show fallback prices immediately
+        symbols.forEach(function(sym) {
+            renderStock(sym, fallback[sym].price, fallback[sym].change, false);
+        });
+        var statusEl = document.getElementById('stock-last-updated');
+        if (statusEl) statusEl.textContent = 'Last close · Updating…';
+
         function handleData(data) {
             var quotes = data && data.quoteResponse && data.quoteResponse.result;
             if (!quotes || !quotes.length) return false;
             quotes.forEach(function(q) {
-                updateStock(q.symbol, q.regularMarketPrice, q.regularMarketChangePercent);
+                renderStock(q.symbol, q.regularMarketPrice, q.regularMarketChangePercent, true);
             });
             var t = new Date().toLocaleTimeString('en-US', { hour: '2-digit', minute: '2-digit' });
-            var el = document.getElementById('stock-last-updated');
-            if (el) el.textContent = 'Live · Updated ' + t + ' · Indicative only';
+            if (statusEl) statusEl.textContent = 'Live · Updated ' + t + ' · Indicative only';
             return true;
         }
 
         function tryProxy(index) {
             if (index >= proxies.length) {
-                var el = document.getElementById('stock-last-updated');
-                if (el) el.textContent = 'Markets may be closed · Prices indicative only';
+                if (statusEl) statusEl.textContent = 'Last close · Live update unavailable';
                 return;
             }
             fetch(proxies[index])
                 .then(function(r) { return r.json(); })
-                .then(function(data) {
-                    if (!handleData(data)) tryProxy(index + 1);
-                })
+                .then(function(data) { if (!handleData(data)) tryProxy(index + 1); })
                 .catch(function() { tryProxy(index + 1); });
         }
 
-        function fetchPrices() { tryProxy(0); }
-
-        fetchPrices();
-        setInterval(fetchPrices, 60000);
+        tryProxy(0);
+        setInterval(function() { tryProxy(0); }, 60000);
     })();
     </script>
 

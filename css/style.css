@@ -39,6 +39,10 @@ html {
     overflow-x: hidden; /* prevent horizontal scroll on iOS */
 }
 
+[id] {
+    scroll-margin-top: 140px; /* ticker(46) + navbar(80) + buffer, clears fixed header on #anchor jumps */
+}
+
 body {
     font-family: 'Calibri', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Helvetica Neue', Arial, sans-serif;
     background: var(--primary);
@@ -211,6 +215,116 @@ ul { list-style: none; }
 .nav-cta:hover {
     transform: translateY(-1px);
     box-shadow: 0 4px 20px rgba(15, 43, 74, 0.3) !important;
+}
+
+/* ===== NAV MEGA-MENU DROPDOWN ===== */
+.nav-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-dropdown-trigger {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 6px;
+}
+
+.nav-caret {
+    font-size: 10px;
+    transition: transform 0.3s ease;
+}
+
+.nav-dropdown:hover .nav-caret,
+.nav-dropdown:focus-within .nav-caret {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translate(-50%, 8px);
+    width: 460px;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    padding: 18px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: opacity 0.25s ease, transform 0.25s ease, visibility 0.25s ease;
+    z-index: 1100;
+}
+
+.nav-dropdown:hover .nav-dropdown-menu,
+.nav-dropdown:focus-within .nav-dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+    transform: translate(-50%, 0);
+}
+
+.nav-dropdown-col {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 12px;
+    border-radius: 10px;
+    transition: background 0.25s ease;
+}
+
+.nav-dropdown-col:hover {
+    background: rgba(15, 43, 74, 0.05);
+}
+
+.nav-dropdown-heading {
+    display: flex !important;
+    align-items: center;
+    gap: 8px;
+    font-size: 13.5px;
+    font-weight: 600;
+    color: var(--navy) !important;
+    padding: 0 !important;
+    background: none !important;
+    margin-bottom: 4px;
+}
+
+.nav-dropdown-heading i {
+    color: var(--accent);
+    width: 16px;
+    text-align: center;
+    flex-shrink: 0;
+}
+
+.nav-dropdown-col span {
+    font-size: 11.5px;
+    color: var(--text-muted);
+    line-height: 1.5;
+}
+
+.nav-dropdown-viewall {
+    grid-column: 1 / -1;
+    margin-top: 10px !important;
+    padding: 12px !important;
+    text-align: center;
+    background: var(--gradient-accent) !important;
+    color: var(--white) !important;
+    border-radius: 8px !important;
+    font-weight: 600 !important;
+    font-size: 13px !important;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.nav-dropdown-viewall:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 16px rgba(15, 43, 74, 0.3);
 }
 
 .mobile-toggle {
@@ -2014,6 +2128,62 @@ section {
     .container { padding: 0 20px; }
 }
 
+/* ===== TABLET NAV — 769–1100px =====
+   8 nav items no longer fit in a single row at laptop widths,
+   so the hamburger menu activates earlier here. Navbar height
+   stays at the desktop 80px (unlike the <=768px mobile navbar).
+   .navbar's backdrop-filter makes it the containing block for this
+   fixed-position panel, so `top` is measured from the navbar's own
+   top (46px) rather than the viewport — 80px here lands at the
+   intended 126px (ticker 46 + navbar 80) in viewport coordinates. */
+@media (max-width: 1100px) and (min-width: 769px) {
+    .mobile-toggle { display: flex; }
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: rgba(255, 255, 255, 0.99);
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 12px 16px 20px;
+        gap: 4px;
+        border-bottom: 1px solid var(--border);
+        box-shadow: 0 8px 32px rgba(0,0,0,0.12);
+        z-index: 999;
+        max-height: calc(100vh - 126px);
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    .nav-links.open { display: flex; }
+    .nav-links a {
+        padding: 13px 16px;
+        font-size: 15px;
+        border-radius: 8px;
+        width: 100%;
+        min-height: 48px;
+        display: flex;
+        align-items: center;
+        touch-action: manipulation;
+        -webkit-tap-highlight-color: transparent;
+    }
+    .nav-cta {
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        margin-top: 8px;
+        padding: 14px 16px !important;
+        font-size: 15px !important;
+        min-height: 48px !important;
+    }
+    .nav-dropdown { width: 100%; }
+    .nav-dropdown-menu,
+    .nav-caret { display: none !important; }
+}
+
 /* ===== MOBILE — 768px ===== */
 @media (max-width: 768px) {
     /* --- Navbar --- */
@@ -2088,6 +2258,16 @@ section {
         padding: 14px 16px !important;
         font-size: 15px !important;
         min-height: 48px !important;
+    }
+    .nav-dropdown {
+        width: 100%;
+    }
+    .nav-dropdown-menu,
+    .nav-caret {
+        display: none !important;
+    }
+    [id] {
+        scroll-margin-top: 116px; /* ticker(46) + navbar(60) + buffer */
     }
 
     /* --- Hero --- */

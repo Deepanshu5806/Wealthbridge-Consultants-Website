@@ -3,9 +3,9 @@
   "configurations": [
     {
       "name": "wealthbridge",
-      "runtimeExecutable": "python",
-      "runtimeArgs": ["-m", "http.server", "8080", "--directory", "C:\\Users\\Deepanshu Jain\\Downloads\\wealthbridge-website"],
-      "port": 8080
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["serve", "-l", "3003", "."],
+      "port": 3003
     }
   ]
 }

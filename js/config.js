@@ -40,6 +40,7 @@ var WB = {
     globalMarkets: 'Hi WealthBridge, I am interested in Global Market investment opportunities.',
     privateEquity: 'Hi WealthBridge, I am interested in Private Equity / Unlisted Share investment opportunities.',
     goldenVisa:    'Hi WealthBridge, I am interested in Golden Visa advisory services.',
+    otherServices: 'Hi WealthBridge, I am interested in your estate planning / legal advisory services (Wills, Trusts, Succession Planning).',
     general:       'Hi WealthBridge, I would like to schedule a free consultation.',
     shareEnquiry:  function (shareName) {
       return 'Hi WealthBridge, I am interested in ' + shareName + ' (Unlisted Share). Please share the latest price and availability.';

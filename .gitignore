@@ -39,3 +39,5 @@ desktop.ini
 sanity-studio/node_modules/
 sanity-studio/.sanity/
 sanity-studio/dist/
+
+.vercel

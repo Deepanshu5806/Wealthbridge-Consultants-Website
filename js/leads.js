@@ -38,6 +38,10 @@
         contact = WB.contacts.general;
         message = WB.messages.goldenVisa;
         break;
+      case 'otherServices':
+        contact = WB.contacts.general;
+        message = WB.messages.otherServices;
+        break;
       default:
         contact = WB.contacts.general;
         message = WB.messages.general;
